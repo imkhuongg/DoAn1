@@ -1,0 +1,11 @@
+C:\LTNet\Doan1\Doan1\obj\Debug\Doan1.csproj.AssemblyReference.cache
+C:\LTNet\Doan1\Doan1\obj\Debug\Doan1.Frm_Tinhdiennuoc.resources
+C:\LTNet\Doan1\Doan1\obj\Debug\Doan1.Properties.Resources.resources
+C:\LTNet\Doan1\Doan1\obj\Debug\Doan1.csproj.GenerateResource.cache
+C:\LTNet\Doan1\Doan1\obj\Debug\Doan1.csproj.CoreCompileInputs.cache
+C:\LTNet\Doan1\Doan1\bin\Debug\Doan1.exe.config
+C:\LTNet\Doan1\Doan1\bin\Debug\Doan1.exe
+C:\LTNet\Doan1\Doan1\bin\Debug\Doan1.pdb
+C:\LTNet\Doan1\Doan1\obj\Debug\Doan1.exe
+C:\LTNet\Doan1\Doan1\obj\Debug\Doan1.pdb
+C:\LTNet\Doan1\Doan1\obj\Debug\Doan1.Frm_Thongke.resources

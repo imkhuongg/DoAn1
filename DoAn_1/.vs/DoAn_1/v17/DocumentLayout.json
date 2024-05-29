@@ -1,0 +1,274 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\DoAn1\\DoAn_1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|e:\\doan1\\doan_1\\mainforms\\reportscreen\\svreporttkscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|solutionrelative:mainforms\\reportscreen\\svreporttkscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|E:\\DoAn1\\DoAn_1\\mainforms\\reportviews\\tksinhvien.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
+      "RelativeMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|solutionrelative:mainforms\\reportviews\\tksinhvien.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|e:\\doan1\\doan_1\\mainforms\\reportscreen\\svreporttkscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|solutionrelative:mainforms\\reportscreen\\svreporttkscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|E:\\DoAn1\\DoAn_1\\mainforms\\tinhdiennuocktxscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|solutionrelative:mainforms\\tinhdiennuocktxscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|E:\\DoAn1\\DoAn_1\\mainforms\\thongkescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|solutionrelative:mainforms\\thongkescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|E:\\DoAn1\\DoAn_1\\mainforms\\thongkescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|solutionrelative:mainforms\\thongkescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|E:\\DoAn1\\DoAn_1\\mainforms\\qlsvform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|solutionrelative:mainforms\\qlsvform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|E:\\DoAn1\\DoAn_1\\mainforms\\qlsvform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|solutionrelative:mainforms\\qlsvform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|E:\\DoAn1\\DoAn_1\\connectdatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|solutionrelative:connectdatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|E:\\DoAn1\\DoAn_1\\mainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|solutionrelative:mainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|E:\\DoAn1\\DoAn_1\\mainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|solutionrelative:mainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|E:\\DoAn1\\DoAn_1\\mainforms\\qlpktxscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|solutionrelative:mainforms\\qlpktxscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|e:\\doan1\\doan_1\\mainforms\\qlpktxscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|solutionrelative:mainforms\\qlpktxscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|e:\\doan1\\doan_1\\mainforms\\tinhdiennuocktxscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D985E920-7BF3-441E-824C-D5EEE2BAC894}|DoAn_1.csproj|solutionrelative:mainforms\\tinhdiennuocktxscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 270,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TKSinhVIen.rdlc [Design]",
+              "DocumentMoniker": "E:\\DoAn1\\DoAn_1\\MainForms\\ReportViews\\TKSinhVIen.rdlc",
+              "RelativeDocumentMoniker": "MainForms\\ReportViews\\TKSinhVIen.rdlc",
+              "ToolTip": "E:\\DoAn1\\DoAn_1\\MainForms\\ReportViews\\TKSinhVIen.rdlc [Design]",
+              "RelativeToolTip": "MainForms\\ReportViews\\TKSinhVIen.rdlc [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
+              "WhenOpened": "2024-05-28T09:28:06.085Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SVReportTKScreen.cs",
+              "DocumentMoniker": "E:\\DoAn1\\DoAn_1\\MainForms\\ReportScreen\\SVReportTKScreen.cs",
+              "RelativeDocumentMoniker": "MainForms\\ReportScreen\\SVReportTKScreen.cs",
+              "ToolTip": "E:\\DoAn1\\DoAn_1\\MainForms\\ReportScreen\\SVReportTKScreen.cs",
+              "RelativeToolTip": "MainForms\\ReportScreen\\SVReportTKScreen.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAA6wB0AAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T15:12:08.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SVReportTKScreen.cs [Design]",
+              "DocumentMoniker": "E:\\DoAn1\\DoAn_1\\MainForms\\ReportScreen\\SVReportTKScreen.cs",
+              "RelativeDocumentMoniker": "MainForms\\ReportScreen\\SVReportTKScreen.cs",
+              "ToolTip": "E:\\DoAn1\\DoAn_1\\MainForms\\ReportScreen\\SVReportTKScreen.cs [Design]",
+              "RelativeToolTip": "MainForms\\ReportScreen\\SVReportTKScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T15:02:33.792Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TinhDienNuocKTXScreen.cs [Design]",
+              "DocumentMoniker": "E:\\DoAn1\\DoAn_1\\MainForms\\TinhDienNuocKTXScreen.cs",
+              "RelativeDocumentMoniker": "MainForms\\TinhDienNuocKTXScreen.cs",
+              "ToolTip": "E:\\DoAn1\\DoAn_1\\MainForms\\TinhDienNuocKTXScreen.cs [Design]",
+              "RelativeToolTip": "MainForms\\TinhDienNuocKTXScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T12:18:02.974Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "QLPKTXScreen.cs [Design]",
+              "DocumentMoniker": "E:\\DoAn1\\DoAn_1\\MainForms\\QLPKTXScreen.cs",
+              "RelativeDocumentMoniker": "MainForms\\QLPKTXScreen.cs",
+              "ToolTip": "E:\\DoAn1\\DoAn_1\\MainForms\\QLPKTXScreen.cs [Design]",
+              "RelativeToolTip": "MainForms\\QLPKTXScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T01:07:16.412Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ConnectDatabase.cs",
+              "DocumentMoniker": "E:\\DoAn1\\DoAn_1\\ConnectDatabase.cs",
+              "RelativeDocumentMoniker": "ConnectDatabase.cs",
+              "ToolTip": "E:\\DoAn1\\DoAn_1\\ConnectDatabase.cs",
+              "RelativeToolTip": "ConnectDatabase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T16:28:14.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainScreen.cs",
+              "DocumentMoniker": "E:\\DoAn1\\DoAn_1\\MainScreen.cs",
+              "RelativeDocumentMoniker": "MainScreen.cs",
+              "ToolTip": "E:\\DoAn1\\DoAn_1\\MainScreen.cs",
+              "RelativeToolTip": "MainScreen.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T06:06:22.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ThongKeScreen.cs",
+              "DocumentMoniker": "E:\\DoAn1\\DoAn_1\\MainForms\\ThongKeScreen.cs",
+              "RelativeDocumentMoniker": "MainForms\\ThongKeScreen.cs",
+              "ToolTip": "E:\\DoAn1\\DoAn_1\\MainForms\\ThongKeScreen.cs",
+              "RelativeToolTip": "MainForms\\ThongKeScreen.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAwwDUAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T19:37:50.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ThongKeScreen.cs [Design]",
+              "DocumentMoniker": "E:\\DoAn1\\DoAn_1\\MainForms\\ThongKeScreen.cs",
+              "RelativeDocumentMoniker": "MainForms\\ThongKeScreen.cs",
+              "ToolTip": "E:\\DoAn1\\DoAn_1\\MainForms\\ThongKeScreen.cs [Design]",
+              "RelativeToolTip": "MainForms\\ThongKeScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T19:28:02.42Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TinhDienNuocKTXScreen.cs",
+              "DocumentMoniker": "E:\\DoAn1\\DoAn_1\\MainForms\\TinhDienNuocKTXScreen.cs",
+              "RelativeDocumentMoniker": "MainForms\\TinhDienNuocKTXScreen.cs",
+              "ToolTip": "E:\\DoAn1\\DoAn_1\\MainForms\\TinhDienNuocKTXScreen.cs",
+              "RelativeToolTip": "MainForms\\TinhDienNuocKTXScreen.cs",
+              "ViewState": "AQIAACoCAAAAAAAAAAAEwEICAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T19:24:16.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "QLSVForm.cs",
+              "DocumentMoniker": "E:\\DoAn1\\DoAn_1\\MainForms\\QLSVForm.cs",
+              "RelativeDocumentMoniker": "MainForms\\QLSVForm.cs",
+              "ToolTip": "E:\\DoAn1\\DoAn_1\\MainForms\\QLSVForm.cs",
+              "RelativeToolTip": "MainForms\\QLSVForm.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABQAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T19:13:26.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "QLSVForm.cs [Design]",
+              "DocumentMoniker": "E:\\DoAn1\\DoAn_1\\MainForms\\QLSVForm.cs",
+              "RelativeDocumentMoniker": "MainForms\\QLSVForm.cs",
+              "ToolTip": "E:\\DoAn1\\DoAn_1\\MainForms\\QLSVForm.cs [Design]",
+              "RelativeToolTip": "MainForms\\QLSVForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T19:11:43.562Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MainScreen.cs [Design]",
+              "DocumentMoniker": "E:\\DoAn1\\DoAn_1\\MainScreen.cs",
+              "RelativeDocumentMoniker": "MainScreen.cs",
+              "ToolTip": "E:\\DoAn1\\DoAn_1\\MainScreen.cs [Design]",
+              "RelativeToolTip": "MainScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T19:09:49.952Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "QLPKTXScreen.cs",
+              "DocumentMoniker": "E:\\DoAn1\\DoAn_1\\MainForms\\QLPKTXScreen.cs",
+              "RelativeDocumentMoniker": "MainForms\\QLPKTXScreen.cs",
+              "ToolTip": "E:\\DoAn1\\DoAn_1\\MainForms\\QLPKTXScreen.cs",
+              "RelativeToolTip": "MainForms\\QLPKTXScreen.cs",
+              "ViewState": "AQIAAJ8DAAAAAAAAAAASwNICAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T19:29:29.467Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 68,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
