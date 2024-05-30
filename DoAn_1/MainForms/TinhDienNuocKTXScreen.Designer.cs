@@ -169,7 +169,7 @@
             this.InfNuoc.Margin = new System.Windows.Forms.Padding(2);
             this.InfNuoc.Name = "InfNuoc";
             this.InfNuoc.Padding = new System.Windows.Forms.Padding(2);
-            this.InfNuoc.Size = new System.Drawing.Size(1040, 535);
+            this.InfNuoc.Size = new System.Drawing.Size(1040, 538);
             this.InfNuoc.TabIndex = 1;
             this.InfNuoc.Text = "Tiền điện";
             this.InfNuoc.UseVisualStyleBackColor = true;
@@ -180,7 +180,7 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(2, 147);
+            this.panel2.Location = new System.Drawing.Point(2, 150);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(814, 386);
@@ -339,7 +339,7 @@
             this.panel5.Location = new System.Drawing.Point(816, 2);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(222, 531);
+            this.panel5.Size = new System.Drawing.Size(222, 534);
             this.panel5.TabIndex = 3;
             // 
             // panel6
@@ -825,7 +825,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(1040, 535);
+            this.tabPage1.Size = new System.Drawing.Size(1040, 538);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Tiền nước";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1160,7 +1160,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(1040, 535);
+            this.tabPage2.Size = new System.Drawing.Size(1040, 538);
             this.tabPage2.TabIndex = 3;
             this.tabPage2.Text = "Hoá đơn theo phòng";
             this.tabPage2.UseVisualStyleBackColor = true;

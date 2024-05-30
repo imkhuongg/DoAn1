@@ -307,6 +307,7 @@ namespace DoAn_1.MainForms
             }
             else
             {
+                MessageBox.Show("Thêm thành công");
                 ConnectAndQuerry(query);
                 LoadTable(QueryDDPKTX, tableDD, TableDDPKTX);
                 
@@ -319,14 +320,28 @@ namespace DoAn_1.MainForms
             Conn = new SqlConnection(ConnectDatabase.ConnDb);
             Conn.Open();
             string query = "DELETE FROM dormitory_items where maphong= '" + NumRoomDDP.Text + "'";
+            string queryCheck = "Select count(*) from dormitory_items where maphong = '"+NumRoomDDP.Text+"'";
+
+            SqlCommand sqlCommand = new SqlCommand(queryCheck,Conn);
             if (NumRoomDDP.Text == "")
             {
                 MessageBox.Show("Nhập số phòng để xoá!!");
+                Conn.Close();
+            } else if (sqlCommand.ExecuteScalar().ToString() == "0")
+            {
+                MessageBox.Show("Không có mã phòng này");
+                Conn.Close();
             }
             else
             {
-                ConnectAndQuerry(query);
-                LoadTable(QueryDDPKTX, tableDD, TableDDPKTX);
+                DialogResult result = MessageBox.Show("Bạn chắc chắn đồ đạc xoá phòng này?" , "" , MessageBoxButtons.OKCancel , MessageBoxIcon.Question);
+                if(result == DialogResult.OK)
+                {
+                    ConnectAndQuerry(query);
+                    LoadTable(QueryDDPKTX, tableDD, TableDDPKTX);
+                    MessageBox.Show("Xoá thành công");
+                }
+                
             }
         }
 
@@ -335,8 +350,19 @@ namespace DoAn_1.MainForms
             Conn = new SqlConnection(ConnectDatabase.ConnDb);
             Conn.Open();
             string query  = "UPDATE dormitory_items SET soluongquat = '" + NumFans.Text + "', soluonggiuong = '" + NumBeds.Text + "' , soluongnem = '" + NumN.Text + "' , soluongban = '" + NumTable.Text + "' , soluongodien = '" + NumPSockets.Text + "'  WHERE maphong= '" + NumRoomDDP.Text + "'";
-            ConnectAndQuerry(query);
-            LoadTable(QueryDDPKTX, tableDD, TableDDPKTX);
+            if(NumRoomDDP.Text == "" || NumFans.Text == "" || NumBeds.Text == "" || NumN.Text == "" || NumTable.Text == "" || NumPSockets.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập thông tin");
+                Conn.Close();
+            }
+            else
+            {
+                ConnectAndQuerry(query);
+                LoadTable(QueryDDPKTX, tableDD, TableDDPKTX);
+                Conn.Close();
+                MessageBox.Show("Sửa thành công");
+            }
+            
             
         }
 
@@ -373,6 +399,7 @@ namespace DoAn_1.MainForms
             string getDataNumRoom = "Select soluongSVdango from dormitory where maphong= '" + IdRoomTransTo.Text + "'";
             string GetMaxNumRoom = "Select soluongSVtoida from dormitory_items where maphong= '" + IdRoomTransTo.Text + "'";
             string UpdateNtru = "update student_residence set maphong= '"+IdRoomTransTo.Text+"' where masv = '"+MaSVTrans.Text+"'";
+            string checkValid = "select * from room_transfer where masv = '"+MaSVTrans.Text+"' and maphong = '"+IdRoomTrans.Text+"'";
 
             //COMMAND
             SqlCommand Check = new SqlCommand(CheckIDQuerry, Conn);
@@ -381,6 +408,7 @@ namespace DoAn_1.MainForms
             SqlCommand checkGioiTinhPhong = new SqlCommand(GioiTinhPhong, Conn);
             SqlCommand GetRoom = new SqlCommand(getDataNumRoom, Conn);
             SqlCommand getMaxSv = new SqlCommand(GetMaxNumRoom, Conn);
+            SqlCommand sqlCommand = new SqlCommand(checkValid, Conn);
 
 
             if (MaSVTrans.Text == "" || IdRoomTrans.Text == "")
@@ -389,6 +417,11 @@ namespace DoAn_1.MainForms
                 Conn.Close();
                 Conn.Dispose();
             } 
+            else if (sqlCommand.ExecuteScalar().ToString() == "1")
+            {
+                MessageBox.Show("Đã có thông tin chuyển phòng này");
+                Conn.Close();
+            }
             else if(Check.ExecuteScalar().ToString() == "0" || CheckID.ExecuteScalar().ToString() == "0"){
                 MessageBox.Show("Không có phòng này hoặc không tồn tại sinh viên");
                 Conn.Close();
@@ -430,6 +463,7 @@ namespace DoAn_1.MainForms
                 }
                 ConnectAndQuerry(updateNumSVTo);
                 LoadTable(QuerryTrans, tableTrans, TableTranfer);
+                MessageBox.Show("Thêm thành công");
             }
         }
 
@@ -456,9 +490,14 @@ namespace DoAn_1.MainForms
             }
             else
             {
-                
-                ConnectAndQuerry(query);
-                LoadTable(QuerryTrans, tableTrans, TableTranfer);
+                DialogResult result = MessageBox.Show("Bạn chắn chắn xoá thông tin chuyển phòng này?");
+                if(result == DialogResult.OK)
+                {
+                    ConnectAndQuerry(query);
+                    LoadTable(QuerryTrans, tableTrans, TableTranfer);
+                    MessageBox.Show("Xoá thành công");
+                }
+               
             }
         }
 
@@ -476,6 +515,7 @@ namespace DoAn_1.MainForms
             {
                 ConnectAndQuerry(query);
                 LoadTable(QuerryTrans, tableTrans, TableTranfer);
+                MessageBox.Show("Sửa thành công");
             }
         }
 
@@ -565,6 +605,7 @@ namespace DoAn_1.MainForms
             }
             else
             {
+                
                 ConnectAndQuerry(query);
                 Conn = new SqlConnection(ConnectDatabase.ConnDb);
                 if (Conn.State == ConnectionState.Closed)
@@ -573,6 +614,7 @@ namespace DoAn_1.MainForms
                 }
                 ConnectAndQuerry(updateNumSV);
                 LoadTable(QueryNtru, tableNtru, NtruTable);
+                MessageBox.Show("Thêm thành công");
                 
             }
         }
@@ -591,14 +633,20 @@ namespace DoAn_1.MainForms
             }
             else
             {
-                ConnectAndQuerry(query);
-                Conn = new SqlConnection(ConnectDatabase.ConnDb);
-                if (Conn.State == ConnectionState.Closed)
+                DialogResult result = MessageBox.Show("Bạn chắc chắn xoá thông tin nội trú này?" , "" , MessageBoxButtons.OKCancel , MessageBoxIcon.Question);
+                if(result == DialogResult.OK)
                 {
-                    Conn.Open();
+                    ConnectAndQuerry(query);
+                    Conn = new SqlConnection(ConnectDatabase.ConnDb);
+                    if (Conn.State == ConnectionState.Closed)
+                    {
+                        Conn.Open();
+                    }
+                    ConnectAndQuerry(updateNumSV);
+                    LoadTable(QueryNtru, tableNtru, NtruTable);
+                    MessageBox.Show("Xoá thành công");
                 }
-                ConnectAndQuerry(updateNumSV);
-                LoadTable(QueryNtru, tableNtru, NtruTable);
+                
             }
         }
 
@@ -616,6 +664,7 @@ namespace DoAn_1.MainForms
                 ConnectAndQuerry(query);
 
                 LoadTable(QueryNtru, tableNtru, NtruTable);
+                MessageBox.Show("Sửa thành công");
             }
         }
 

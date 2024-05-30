@@ -50,6 +50,7 @@
             this.KTXTable = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.PaymentRpBtn = new System.Windows.Forms.Button();
             this.DatePay = new System.Windows.Forms.DateTimePicker();
             this.PayCB = new System.Windows.Forms.ComboBox();
             this.PayTxt = new System.Windows.Forms.TextBox();
@@ -57,8 +58,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.PayTable = new System.Windows.Forms.DataGridView();
-            this.PaymentRpBtn = new System.Windows.Forms.Button();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -82,7 +81,6 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tabControl1.Location = new System.Drawing.Point(2, 2);
             this.tabControl1.Name = "tabControl1";
@@ -341,6 +339,17 @@
             this.panel6.Size = new System.Drawing.Size(210, 536);
             this.panel6.TabIndex = 3;
             // 
+            // PaymentRpBtn
+            // 
+            this.PaymentRpBtn.BackColor = System.Drawing.Color.DimGray;
+            this.PaymentRpBtn.Location = new System.Drawing.Point(39, 149);
+            this.PaymentRpBtn.Name = "PaymentRpBtn";
+            this.PaymentRpBtn.Size = new System.Drawing.Size(142, 36);
+            this.PaymentRpBtn.TabIndex = 9;
+            this.PaymentRpBtn.Text = "Xuất báo cáo";
+            this.PaymentRpBtn.UseVisualStyleBackColor = false;
+            this.PaymentRpBtn.Click += new System.EventHandler(this.PaymentRpBtn_Click);
+            // 
             // DatePay
             // 
             this.DatePay.CalendarFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -425,27 +434,6 @@
             this.PayTable.Size = new System.Drawing.Size(825, 482);
             this.PayTable.TabIndex = 0;
             // 
-            // PaymentRpBtn
-            // 
-            this.PaymentRpBtn.BackColor = System.Drawing.Color.DimGray;
-            this.PaymentRpBtn.Location = new System.Drawing.Point(39, 149);
-            this.PaymentRpBtn.Name = "PaymentRpBtn";
-            this.PaymentRpBtn.Size = new System.Drawing.Size(142, 36);
-            this.PaymentRpBtn.TabIndex = 9;
-            this.PaymentRpBtn.Text = "Xuất báo cáo";
-            this.PaymentRpBtn.UseVisualStyleBackColor = false;
-            this.PaymentRpBtn.Click += new System.EventHandler(this.PaymentRpBtn_Click);
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1057, 542);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Báo cáo danh sách";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
             // ThongKeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -511,6 +499,5 @@
         private System.Windows.Forms.Button SVReportBtn;
         private System.Windows.Forms.Button PKTXReportBtn;
         private System.Windows.Forms.Button PaymentRpBtn;
-        private System.Windows.Forms.TabPage tabPage4;
     }
 }

@@ -27,41 +27,12 @@ namespace DoAn_1.MainForms.Component
             PassnewTxt.UseSystemPasswordChar = true;
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-            label3.Text = "Hiện";
-            if(label3.Text == "Hiện")
-            {
-                label3.Text = "Ẩn";
-                PassoldTxt.UseSystemPasswordChar=false;
-            }
-            else if(label3.Text == "Ẩn")
-            {
-                label3.Text = "Hiện";
-                PassoldTxt.UseSystemPasswordChar = true;
-            }
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-            label4.Text = "Hiện";
-            if (label4.Text == "Hiện")
-            {
-                label4.Text = "Ẩn";
-                PassnewTxt.UseSystemPasswordChar = false;
-            }
-            else if(label4.Text == "Ẩn")
-            {
-                label4.Text = "Hiện";
-                PassnewTxt.UseSystemPasswordChar = true;
-            }
-        }
-
+      
         private void button1_Click(object sender, EventArgs e)
         {
             conn = new SqlConnection(ConnectDatabase.ConnDb);
             conn.Open();
-            string query = "update user_table set password = '"+PassnewTxt+"' where username = '"+Properties.Settings.Default.username+"'";
+            string query = "update user_table set password = '"+PassnewTxt.Text+"' where username = '"+Properties.Settings.Default.username+"'";
             string check = "select count(password) from user_table where password = '"+PassoldTxt.Text+ "' and username = '"+Properties.Settings.Default.username+"'";
 
             SqlCommand sqlCommand = new SqlCommand(check , conn);
@@ -80,38 +51,37 @@ namespace DoAn_1.MainForms.Component
                 cm1 = new SqlCommand(query , conn);
                 cm1.ExecuteNonQuery();
                 conn.Close();
-                MessageBox.Show("Đổi mật khẩu thành công");
+                DialogResult result = MessageBox.Show("Đổi mật khẩu thành công");
+                if(result == DialogResult.OK)
+                {
+                    this.Hide();
+                    this.Close();
+                }
             }
         }
 
-        private void label3_MouseClick(object sender, MouseEventArgs e)
+        private void label3_MouseDown(object sender, MouseEventArgs e)
+        {
+            label3.Text = "Ẩn";
+            PassoldTxt.UseSystemPasswordChar = false;
+        }
+
+        private void label3_MouseUp(object sender, MouseEventArgs e)
         {
             label3.Text = "Hiện";
-            if (label3.Text == "Hiện")
-            {
-                label3.Text = "Ẩn";
-                PassoldTxt.UseSystemPasswordChar = false;
-            }
-            else if (label3.Text == "Ẩn")
-            {
-                label3.Text = "Hiện";
-                PassoldTxt.UseSystemPasswordChar = true;
-            }
+            PassoldTxt.UseSystemPasswordChar = true;
         }
 
-        private void label4_MouseClick(object sender, MouseEventArgs e)
+        private void label4_MouseDown(object sender, MouseEventArgs e)
         {
-            label4.Text = "Hiện";
-            if (label4.Text == "Hiện")
-            {
-                label4.Text = "Ẩn";
-                PassnewTxt.UseSystemPasswordChar = false;
-            }
-            else if (label4.Text == "Ẩn")
-            {
-                label4.Text = "Hiện";
-                PassnewTxt.UseSystemPasswordChar = true;
-            }
+            label4.Text = "Ẩn";
+            PassnewTxt.UseSystemPasswordChar = false;
+        }
+
+        private void label4_MouseUp(object sender, MouseEventArgs e)
+        {
+            label4.Text = "Ẩn";
+            PassnewTxt.UseSystemPasswordChar = true;
         }
     }
 }

@@ -96,8 +96,9 @@
             this.label3.Size = new System.Drawing.Size(38, 18);
             this.label3.TabIndex = 5;
             this.label3.Text = "Hiện";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            this.label3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label3_MouseClick);
+          
+            this.label3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label3_MouseDown);
+            this.label3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.label3_MouseUp);
             // 
             // label4
             // 
@@ -109,8 +110,9 @@
             this.label4.Size = new System.Drawing.Size(38, 18);
             this.label4.TabIndex = 6;
             this.label4.Text = "Hiện";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            this.label4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label4_MouseClick);
+    
+            this.label4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label4_MouseDown);
+            this.label4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.label4_MouseUp);
             // 
             // ChangePasword
             // 

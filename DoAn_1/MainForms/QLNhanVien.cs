@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DoAn_1.MainForms.ReportScreen;
 
 namespace DoAn_1.MainForms
 {
@@ -267,6 +268,12 @@ namespace DoAn_1.MainForms
                     MessageBox.Show("Cập nhật thành công, mật khẩu mới là 123123");
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DSNhanVienScreen dSNhanVienScreen = new DSNhanVienScreen();
+            dSNhanVienScreen.ShowDialog();
         }
     }
 }

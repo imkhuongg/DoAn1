@@ -66,6 +66,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectDatabase.cs" />
+    <Compile Include="FogotPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FogotPass.Designer.cs">
+      <DependentUpon>FogotPass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,12 @@
     <Compile Include="MainForms\ReportScreen\DSHoaDonScreen.Designer.cs">
       <DependentUpon>DSHoaDonScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForms\ReportScreen\DSNhanVienScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\ReportScreen\DSNhanVienScreen.Designer.cs">
+      <DependentUpon>DSNhanVienScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForms\ReportScreen\DSNTruScrees.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +243,9 @@
       <DependentUpon>QLDienNuocKTX_DoAn1DataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="FogotPass.resx">
+      <DependentUpon>FogotPass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -273,6 +288,9 @@
     <EmbeddedResource Include="MainForms\ReportScreen\DSHoaDonScreen.resx">
       <DependentUpon>DSHoaDonScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\ReportScreen\DSNhanVienScreen.resx">
+      <DependentUpon>DSNhanVienScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForms\ReportScreen\DSNTruScrees.resx">
       <DependentUpon>DSNTruScrees.cs</DependentUpon>
     </EmbeddedResource>
@@ -300,6 +318,7 @@
     <EmbeddedResource Include="MainForms\ReportViews\DSChuyenPhong.rdlc" />
     <EmbeddedResource Include="MainForms\ReportViews\DSDDPKTX.rdlc" />
     <EmbeddedResource Include="MainForms\ReportViews\DSHoaDon.rdlc" />
+    <EmbeddedResource Include="MainForms\ReportViews\DSNhanVien.rdlc" />
     <EmbeddedResource Include="MainForms\ReportViews\DSNTru.rdlc" />
     <EmbeddedResource Include="MainForms\ReportViews\DSPKTX.rdlc" />
     <EmbeddedResource Include="MainForms\ReportViews\DSTienDien.rdlc" />

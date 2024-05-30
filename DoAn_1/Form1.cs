@@ -54,6 +54,7 @@ namespace DoAn_1
         }
         private void button1_Click(object sender, EventArgs e)
         {
+
             Application.Exit();
         }
        
@@ -139,6 +140,15 @@ namespace DoAn_1
         {
             getus();
             getps();
+        }
+
+        private void Foget_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FogotPass fogotPass = new FogotPass();
+            fogotPass.ShowDialog();
+            this.Close();
+
         }
     }
 }

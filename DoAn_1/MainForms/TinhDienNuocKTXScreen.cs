@@ -173,6 +173,7 @@ namespace DoAn_1.MainForms
             {
                 ConnectAndQuerry(query);
                 LoadTable(QueryTBDonGia, tableDonGia, DonGiaTable);
+                MessageBox.Show("Thêm thành công");
             }
 
         }
@@ -225,9 +226,14 @@ namespace DoAn_1.MainForms
             }
             else
             {
-                ConnectAndQuerry(query);
-                MessageBox.Show("Xoá thành công");
-                LoadTable(QueryTBDonGia, tableDonGia, DonGiaTable);
+                DialogResult result = MessageBox.Show("Bạn chắc xoá đơn giá này!" , "" , MessageBoxButtons.OKCancel , MessageBoxIcon.Question);
+                if(result == DialogResult.OK)
+                {
+                    ConnectAndQuerry(query);
+                    MessageBox.Show("Xoá thành công");
+                    LoadTable(QueryTBDonGia, tableDonGia, DonGiaTable);
+                }
+                
             }
         }
 
@@ -359,10 +365,12 @@ namespace DoAn_1.MainForms
             string query = "insert into ElecDevice(maphong,macongto,loaicongto,chisodien,ngaychotsodien) values ('" + IdRoomElelcTxt.Text + "','" + IdElecTxt.Text + "','" + ElecTypeTxt.Text + "','" + indexElecTxt.Text + "','" + DateElec.Text + "')";
             string checkdate = "Select count(*) from ElecDevice where ngaychotsodien = '" + DateElec.Text + "' and  maphong = '" + IdRoomElelcTxt.Text + "'";
             string checkIdRoom = "Select count(*) from dormitory where maphong = '" + IdRoomElelcTxt.Text + "'";
+            string checkIDde = "Select count(*) from ElecDevice where macongto = '"+IdElecTxt.Text+"'";
             string autoInsert = "with RoomCountPerBuilding AS (\r\n    SELECT sotoa, COUNT(maphong) AS RoomCount\r\n    FROM dormitory\r\n\twhere soluongSVdango > 0\r\n    GROUP BY sotoa\r\n\t\r\n)\r\ninsert into payment(maphong,tongtiendien,tongtiennuoc,tienphong,tongtien,ngaychotsodien,ngaychotsonuoc)\r\nselect dormitory.maphong, bill.dongiadien * ElecDevice.chisodien as tongtiendien , bill.dongianuoc * (waterPay.tongsokhoi / RoomCountPerBuilding.RoomCount)   as tongtiennuoc, bill.dongiaphong as tienphong,\r\n(bill.dongiadien * ElecDevice.chisodien) +(bill.dongianuoc * (waterPay.tongsokhoi / RoomCountPerBuilding.RoomCount)) +bill.dongiaphong  as tongtien,\r\nElecDevice.ngaychotsodien,waterPay.ngaychotsonuoc\r\nfrom  dormitory \r\njoin ElecDevice on dormitory.maphong = ElecDevice.maphong\r\njoin bill on dormitory.maphong = bill.maphong\r\njoin waterPay on waterPay.sotoa = dormitory.sotoa\r\njoin RoomCountPerBuilding on waterPay.sotoa = RoomCountPerBuilding.sotoa\r\nwhere dormitory.soluongSVdango > 0 and ElecDevice.maphong = '"+IdRoomElelcTxt.Text+"' and ElecDevice.ngaychotsodien = '"+DateElec.Text+"'\r\n";
 
             SqlCommand cm1 = new SqlCommand(checkdate, Conn);
             SqlCommand cm2 = new SqlCommand(checkIdRoom, Conn);
+            SqlCommand cm3 = new SqlCommand(checkIDde, Conn);
 
 
             if (IdRoomElelcTxt.Text == "" || IdElecTxt.Text == "" || ElecTypeTxt.Text == "" || indexElecTxt.Text == "")
@@ -379,6 +387,23 @@ namespace DoAn_1.MainForms
             {
                 MessageBox.Show("Không có mã phòng này");
             }
+            else if(cm3.ExecuteScalar().ToString().CompareTo("0") != 0)
+            {
+                DialogResult result = MessageBox.Show("Mã công tơ đã có trong danh sách , bạn có chắc đây là mã công tơ của phòng này?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question );
+                if(result == DialogResult.Yes)
+                {
+                    ConnectAndQuerry(query);
+                    Conn = new SqlConnection(ConnectDatabase.ConnDb);
+                    if (Conn.State == ConnectionState.Closed)
+                    {
+                        Conn.Open();
+                    }
+
+                    ConnectAndQuerry(autoInsert);
+                    LoadTable(QueryTBCongTo, tableCongTo, ElecTable);
+                    MessageBox.Show("Thêm thành công");
+                }
+            }
             else
             {
                 ConnectAndQuerry(query);
@@ -387,11 +412,12 @@ namespace DoAn_1.MainForms
                 {
                     Conn.Open();
                 }
-                MessageBox.Show("Thêm thành công");
+               
                 ConnectAndQuerry(autoInsert);
                 LoadTable(QueryTBCongTo, tableCongTo, ElecTable);
+                MessageBox.Show("Thêm thành công");
 
-                
+
             }
 
         }
@@ -401,7 +427,7 @@ namespace DoAn_1.MainForms
             Conn = new SqlConnection(ConnectDatabase.ConnDb);
             Conn.Open();
 
-            string query = "Update ElecDevice SET ngaychotsodien = '" + DateElec.Text + "' ,macongto = '" + IdElecTxt.Text + "' , loaicongto = '" + ElecTypeTxt.Text + "', chisodien = '" + indexElecTxt.Text + "' where maphong = '" + IdRoomElelcTxt.Text + "'";
+            string query = "Update ElecDevice SET ngaychotsodien = '" + DateElec.Text + "' ,macongto = '" + IdElecTxt.Text + "' , loaicongto = N'" + ElecTypeTxt.Text + "', chisodien = '" + indexElecTxt.Text + "' where maphong = '" + IdRoomElelcTxt.Text + "'";
 
             if (IdRoomElelcTxt.Text == "" || IdElecTxt.Text == "" || ElecTypeTxt.Text == "" || indexElecTxt.Text == "")
             {
@@ -431,10 +457,14 @@ namespace DoAn_1.MainForms
             }
             else
             {
-                ConnectAndQuerry(query);
-               
-                LoadTable(QueryTBCongTo, tableCongTo, ElecTable);
-                MessageBox.Show("Xoá thành công");
+                DialogResult result = MessageBox.Show("Bạn có chắc xoá thông tin này", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.OK)
+                {
+                    ConnectAndQuerry(query);
+
+                    LoadTable(QueryTBCongTo, tableCongTo, ElecTable);
+                    MessageBox.Show("Xoá thành công");
+                }
             }
         }
 
@@ -565,9 +595,11 @@ namespace DoAn_1.MainForms
             string checkNumBuild = "Select count(*) from dormitory where sotoa = '"+ NumBuildWtTxt.Text+"'";
             string check = "select count(*) from waterPay where sotoa = '"+NumBuildWtTxt.Text+"' and ngaychotsonuoc = '"+ DateWater.Text+"'";
             string autoInsert = "with RoomCountPerBuilding AS (\r\n    SELECT sotoa, COUNT(maphong) AS RoomCount\r\n    FROM dormitory\r\n\twhere soluongSVdango > 0\r\n    GROUP BY sotoa\r\n\t\r\n)\r\ninsert into payment(maphong,tongtiendien,tongtiennuoc,tienphong,tongtien,ngaychotsodien,ngaychotsonuoc)\r\nselect dormitory.maphong, bill.dongiadien * ElecDevice.chisodien as tongtiendien , bill.dongianuoc * (waterPay.tongsokhoi / RoomCountPerBuilding.RoomCount)   as tongtiennuoc, bill.dongiaphong as tienphong,\r\n(bill.dongiadien * ElecDevice.chisodien) +(bill.dongianuoc * (waterPay.tongsokhoi / RoomCountPerBuilding.RoomCount)) +bill.dongiaphong  as tongtien,\r\nElecDevice.ngaychotsodien,waterPay.ngaychotsonuoc\r\nfrom  dormitory \r\njoin ElecDevice on dormitory.maphong = ElecDevice.maphong\r\njoin bill on dormitory.maphong = bill.maphong\r\njoin waterPay on waterPay.sotoa = dormitory.sotoa\r\njoin RoomCountPerBuilding on waterPay.sotoa = RoomCountPerBuilding.sotoa\r\nwhere dormitory.soluongSVdango > 0 and waterPay.sotoa = '"+NumBuildWtTxt.Text+"' and waterPay.ngaychotsonuoc = '"+DateWater.Text+"'\r\n";
+        
 
             SqlCommand cmdNumBuil = new SqlCommand(checkNumBuild,Conn);
             SqlCommand cmdCheck = new SqlCommand(check , Conn);
+            
 
             if (NumBuildWtTxt.Text == "" || IdWaterDevTxt.Text == "" || TypeDevTxt.Text == "" || DinhMucTxt.Text == "")
             {
@@ -602,7 +634,7 @@ namespace DoAn_1.MainForms
             Conn = new SqlConnection(ConnectDatabase.ConnDb);
             Conn.Open();
 
-            string query = "UPDATE waterPay SET madongho = '"+IdWaterDevTxt.Text+"',loaidongho = '"+TypeDevTxt.Text+"' , tongsokhoi = '"+DinhMucTxt.Text+ "' where sotoa = '"+NumBuildWtTxt.Text+"' and madongho = '"+IdWaterDevTxt.Text+"'  ";
+            string query = "UPDATE waterPay SET madongho = '"+IdWaterDevTxt.Text+"',loaidongho = N'"+TypeDevTxt.Text+"' , tongsokhoi = '"+DinhMucTxt.Text+ "' where sotoa = '"+NumBuildWtTxt.Text+"' and madongho = '"+IdWaterDevTxt.Text+"'  ";
             string check = "select count(*) from waterPay where sotoa = '" + NumBuildWtTxt.Text + "' and ngaychotsonuoc = '" + DateWater.Text + "'";
 
             SqlCommand cmdCheck = new SqlCommand(check, Conn);
@@ -639,9 +671,13 @@ namespace DoAn_1.MainForms
             }
             else
             {
-                ConnectAndQuerry(query);
-                MessageBox.Show("xoá thành công");
-                LoadTable(QueryTBNuoc, tableNuoc, WaterTable);
+                DialogResult result = MessageBox.Show("Bạn có chắc xoá thông tin này", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.OK)
+                {
+                    ConnectAndQuerry(query);
+                    MessageBox.Show("xoá thành công");
+                    LoadTable(QueryTBNuoc, tableNuoc, WaterTable);
+                }
             }
         }
 

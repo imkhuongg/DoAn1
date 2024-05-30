@@ -90,3 +90,5 @@ E:\DoAn1\DoAn_1\obj\Debug\DoAn_1.MainForms.Component.ChangeNameScreen.resources
 E:\DoAn1\DoAn_1\obj\Debug\DoAn_1.MainForms.Component.ChangePasword.resources
 E:\DoAn1\DoAn_1\bin\Debug\access\pexels-samerdaboul-746111.jpg
 E:\DoAn1\DoAn_1\obj\Debug\DoAn_1.MainForms.Component.ChangeAvatar.resources
+E:\DoAn1\DoAn_1\obj\Debug\DoAn_1.FogotPass.resources
+E:\DoAn1\DoAn_1\obj\Debug\DoAn_1.MainForms.ReportScreen.DSNhanVienScreen.resources

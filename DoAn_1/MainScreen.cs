@@ -175,14 +175,19 @@ namespace DoAn_1
 
         private void Logout_Click(object sender, EventArgs e)
         {
-            ChangeBtnLogOut();
-            this.Hide();
-            Properties.Settings.Default.username = "";
-            Properties.Settings.Default.password = "";
-            Properties.Settings.Default.Save();
-            Form1 Login = new Form1();
-            Login.ShowDialog();
-            this.Close();
+            DialogResult result = MessageBox.Show("Bạn chắc chắn muốn đăng xuất?" , "" , MessageBoxButtons.YesNo , MessageBoxIcon.Question);
+            if(result == DialogResult.Yes)
+            {
+                ChangeBtnLogOut();
+                this.Hide();
+                Properties.Settings.Default.username = "";
+                Properties.Settings.Default.password = "";
+                Properties.Settings.Default.Save();
+                Form1 Login = new Form1();
+                Login.ShowDialog();
+                this.Close();
+            }
+            
         }
 
         private void headerCtn_Paint(object sender, PaintEventArgs e)

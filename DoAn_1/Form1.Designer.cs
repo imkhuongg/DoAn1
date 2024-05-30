@@ -66,22 +66,23 @@
             Foget.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             Foget.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             Foget.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            Foget.Location = new System.Drawing.Point(179, 334);
-            Foget.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            Foget.Location = new System.Drawing.Point(134, 271);
+            Foget.Margin = new System.Windows.Forms.Padding(2);
             Foget.Name = "Foget";
-            Foget.Size = new System.Drawing.Size(148, 47);
+            Foget.Size = new System.Drawing.Size(111, 38);
             Foget.TabIndex = 5;
             Foget.Text = "Quên mật khẩu?";
             Foget.UseVisualStyleBackColor = false;
+            Foget.Click += new System.EventHandler(this.Foget_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(11, 9);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(8, 7);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(31, 25);
+            this.pictureBox3.Size = new System.Drawing.Size(23, 20);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
@@ -102,10 +103,10 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.closebutton);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(296, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(222, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(467, 554);
+            this.panel2.Size = new System.Drawing.Size(350, 450);
             this.panel2.TabIndex = 3;
             // 
             // RmCheckB
@@ -114,10 +115,10 @@
             this.RmCheckB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RmCheckB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RmCheckB.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.RmCheckB.Location = new System.Drawing.Point(296, 290);
-            this.RmCheckB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RmCheckB.Location = new System.Drawing.Point(222, 236);
+            this.RmCheckB.Margin = new System.Windows.Forms.Padding(2);
             this.RmCheckB.Name = "RmCheckB";
-            this.RmCheckB.Size = new System.Drawing.Size(150, 21);
+            this.RmCheckB.Size = new System.Drawing.Size(129, 19);
             this.RmCheckB.TabIndex = 6;
             this.RmCheckB.Text = "Ghi nhớ đăng nhập";
             this.RmCheckB.UseVisualStyleBackColor = true;
@@ -131,10 +132,10 @@
             this.Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Login.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Login.ForeColor = System.Drawing.Color.White;
-            this.Login.Location = new System.Drawing.Point(25, 334);
-            this.Login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Login.Location = new System.Drawing.Point(19, 271);
+            this.Login.Margin = new System.Windows.Forms.Padding(2);
             this.Login.Name = "Login";
-            this.Login.Size = new System.Drawing.Size(148, 47);
+            this.Login.Size = new System.Drawing.Size(111, 38);
             this.Login.TabIndex = 4;
             this.Login.Text = "ĐĂNG NHẬP";
             this.Login.UseVisualStyleBackColor = false;
@@ -145,20 +146,20 @@
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.textBox2);
             this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Location = new System.Drawing.Point(0, 239);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Location = new System.Drawing.Point(0, 194);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(467, 45);
+            this.panel4.Size = new System.Drawing.Size(351, 37);
             this.panel4.TabIndex = 3;
             // 
             // textBox2
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox2.Location = new System.Drawing.Point(52, 12);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox2.Location = new System.Drawing.Point(39, 10);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(371, 19);
+            this.textBox2.Size = new System.Drawing.Size(278, 16);
             this.textBox2.TabIndex = 7;
             this.textBox2.UseSystemPasswordChar = true;
             // 
@@ -167,29 +168,29 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Location = new System.Drawing.Point(0, 180);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Location = new System.Drawing.Point(0, 146);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(467, 45);
+            this.panel3.Size = new System.Drawing.Size(351, 37);
             this.panel3.TabIndex = 2;
             // 
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(52, 12);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Location = new System.Drawing.Point(39, 10);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(371, 15);
+            this.textBox1.Size = new System.Drawing.Size(278, 13);
             this.textBox1.TabIndex = 4;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(17, 9);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(13, 7);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 25);
+            this.pictureBox2.Size = new System.Drawing.Size(18, 20);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
@@ -199,9 +200,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label6.Location = new System.Drawing.Point(27, 121);
+            this.label6.Location = new System.Drawing.Point(20, 98);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(156, 32);
+            this.label6.Size = new System.Drawing.Size(120, 25);
             this.label6.TabIndex = 1;
             this.label6.Text = "Đăng Nhập";
             // 
@@ -211,10 +213,10 @@
             this.closebutton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.closebutton.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.closebutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.closebutton.Location = new System.Drawing.Point(428, 0);
-            this.closebutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.closebutton.Location = new System.Drawing.Point(321, 0);
+            this.closebutton.Margin = new System.Windows.Forms.Padding(2);
             this.closebutton.Name = "closebutton";
-            this.closebutton.Size = new System.Drawing.Size(40, 39);
+            this.closebutton.Size = new System.Drawing.Size(30, 32);
             this.closebutton.TabIndex = 0;
             this.closebutton.Text = "X";
             this.closebutton.UseVisualStyleBackColor = true;
@@ -223,10 +225,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(95, 65);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(71, 53);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 121);
+            this.pictureBox1.Size = new System.Drawing.Size(90, 98);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -237,9 +239,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.LightGray;
-            this.label3.Location = new System.Drawing.Point(108, 458);
+            this.label3.Location = new System.Drawing.Point(81, 372);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 16);
+            this.label3.Size = new System.Drawing.Size(101, 14);
             this.label3.TabIndex = 2;
             this.label3.Text = "Được phát triển bởi";
             // 
@@ -248,9 +251,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(89, 239);
+            this.label2.Location = new System.Drawing.Point(67, 194);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 32);
+            this.label2.Size = new System.Drawing.Size(151, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "trong ký túc xá";
             // 
@@ -259,9 +263,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.LightGray;
-            this.label5.Location = new System.Drawing.Point(161, 473);
+            this.label5.Location = new System.Drawing.Point(121, 384);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 64);
+            this.label5.Size = new System.Drawing.Size(103, 56);
             this.label5.TabIndex = 4;
             this.label5.Text = "Lương Duy Khương\r\nTạ Quỳnh Anh\r\nNguyễn Ngọc Lan\r\n Hoàng Phi Hùng";
             // 
@@ -270,9 +275,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.LightGray;
-            this.label4.Location = new System.Drawing.Point(108, 473);
+            this.label4.Location = new System.Drawing.Point(81, 384);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 16);
+            this.label4.Size = new System.Drawing.Size(49, 14);
             this.label4.TabIndex = 3;
             this.label4.Text = "Nhóm 4 :";
             // 
@@ -289,9 +295,9 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 554);
+            this.panel1.Size = new System.Drawing.Size(225, 450);
             this.panel1.TabIndex = 2;
             // 
             // label1
@@ -299,21 +305,21 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(45, 194);
+            this.label1.Location = new System.Drawing.Point(34, 158);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(247, 32);
+            this.label1.Size = new System.Drawing.Size(187, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Quản lý điện nước";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(763, 554);
+            this.ClientSize = new System.Drawing.Size(572, 450);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

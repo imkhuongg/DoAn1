@@ -60,7 +60,7 @@ namespace DoAn_1.MainForms.Component
 
             // Copy file ảnh vào vị trí mới
             File.Copy(imagePath, this.savePath, true);
-            MessageBox.Show("Image saved successfully at: " + this.savePath);
+           
         }
         private void ChangeBtn_Click(object sender, EventArgs e)
         {
@@ -99,7 +99,13 @@ namespace DoAn_1.MainForms.Component
             SqlCommand cmd = new SqlCommand(query , Conn);
             cmd.ExecuteNonQuery();
             Conn.Close();
-            MessageBox.Show("Thay đổi thành công");
+            DialogResult result = MessageBox.Show("Thay đổi thành công");
+            if(result == DialogResult.OK)
+            {
+                this.Hide();
+                this.Close();
+                MainScreen.instance.LoadForm(new SettingScreen());
+            }
 
         }
     }

@@ -45,13 +45,13 @@
             this.AddBtn = new System.Windows.Forms.Button();
             this.InitBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.RePass = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.SearchTxt = new System.Windows.Forms.TextBox();
             this.SearchList = new System.Windows.Forms.ComboBox();
             this.DelBtn = new System.Windows.Forms.Button();
             this.SearchBtn = new System.Windows.Forms.Button();
             this.EditBtn = new System.Windows.Forms.Button();
-            this.RePass = new System.Windows.Forms.Button();
             this.SVTableCtn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NVTable)).BeginInit();
             this.TableCtn.SuspendLayout();
@@ -260,6 +260,20 @@
             this.panel1.Size = new System.Drawing.Size(200, 533);
             this.panel1.TabIndex = 8;
             // 
+            // RePass
+            // 
+            this.RePass.FlatAppearance.BorderSize = 0;
+            this.RePass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RePass.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.RePass.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.RePass.Location = new System.Drawing.Point(3, 264);
+            this.RePass.Name = "RePass";
+            this.RePass.Size = new System.Drawing.Size(194, 60);
+            this.RePass.TabIndex = 17;
+            this.RePass.Text = "Reset mật khẩu nhân viên";
+            this.RePass.UseVisualStyleBackColor = true;
+            this.RePass.Click += new System.EventHandler(this.RePass_Click);
+            // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -271,6 +285,7 @@
             this.button1.TabIndex = 16;
             this.button1.Text = "Xuất file";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // SearchTxt
             // 
@@ -342,20 +357,6 @@
             this.EditBtn.Text = "Sửa";
             this.EditBtn.UseVisualStyleBackColor = true;
             this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click);
-            // 
-            // RePass
-            // 
-            this.RePass.FlatAppearance.BorderSize = 0;
-            this.RePass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RePass.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.RePass.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.RePass.Location = new System.Drawing.Point(3, 264);
-            this.RePass.Name = "RePass";
-            this.RePass.Size = new System.Drawing.Size(194, 60);
-            this.RePass.TabIndex = 17;
-            this.RePass.Text = "Reset mật khẩu nhân viên";
-            this.RePass.UseVisualStyleBackColor = true;
-            this.RePass.Click += new System.EventHandler(this.RePass_Click);
             // 
             // QLNhanVien
             // 

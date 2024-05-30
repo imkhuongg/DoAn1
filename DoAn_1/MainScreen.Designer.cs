@@ -54,10 +54,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.headerCtn = new System.Windows.Forms.Panel();
+            this.mainPanel = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.mainPanel = new System.Windows.Forms.Panel();
             this.QLSV.SuspendLayout();
             this.BtnOverview.SuspendLayout();
             this.QLDienNuoc.SuspendLayout();
@@ -299,7 +299,7 @@
             this.Logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(74)))), ((int)(((byte)(70)))));
             this.Logout.Controls.Add(this.label11);
             this.Logout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Logout.Location = new System.Drawing.Point(0, 519);
+            this.Logout.Location = new System.Drawing.Point(0, 516);
             this.Logout.Margin = new System.Windows.Forms.Padding(2);
             this.Logout.Name = "Logout";
             this.Logout.Size = new System.Drawing.Size(311, 52);
@@ -317,6 +317,7 @@
             this.label11.Size = new System.Drawing.Size(78, 18);
             this.label11.TabIndex = 0;
             this.label11.Text = "Đăng xuất";
+            this.label11.Click += new System.EventHandler(this.Logout_Click);
             // 
             // About_ctn
             // 
@@ -416,6 +417,15 @@
             this.headerCtn.TabIndex = 3;
             this.headerCtn.Paint += new System.Windows.Forms.PaintEventHandler(this.headerCtn_Paint);
             // 
+            // mainPanel
+            // 
+            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainPanel.Location = new System.Drawing.Point(315, 83);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1048, 572);
+            this.mainPanel.TabIndex = 5;
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -451,15 +461,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // mainPanel
-            // 
-            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainPanel.Location = new System.Drawing.Point(315, 83);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1048, 572);
-            this.mainPanel.TabIndex = 5;
             // 
             // MainScreen
             // 

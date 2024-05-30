@@ -24,7 +24,39 @@ namespace DoAn_1.MainForms.Component
 
         private void ChangeNameScreen_Load(object sender, EventArgs e)
         {
+            conn = new SqlConnection(ConnectDatabase.ConnDb);
+            conn.Open();
+            string getLname = "select last_name from user_table where username = '"+Properties.Settings.Default.username+"'";
+            string FName = "select first_name from user_table where username = '" + Properties.Settings.Default.username + "'";
+            string getemail = "select email from user_table where username = '" + Properties.Settings.Default.username + "'";
 
+            SqlCommand cm1 = new SqlCommand(getLname,conn);
+            SqlCommand cm2 = new SqlCommand(FName, conn);
+            SqlCommand cm3 = new SqlCommand(getemail, conn);
+            
+            if (cm1.ExecuteScalar() == null && cm3.ExecuteScalar() != null)
+            {
+               
+                TenTxtBox.Text = cm2.ExecuteScalar().ToString();
+                emailTxtB.Text = cm3.ExecuteScalar().ToString();
+            }
+            else if  (cm3.ExecuteScalar() == null && cm1.ExecuteScalar() != null )
+            {
+                TenTxtBox.Text = cm2.ExecuteScalar().ToString();
+                HoTxtBox.Text = cm1.ExecuteScalar().ToString();
+            }
+
+            else if (cm3.ExecuteScalar() == null && cm1.ExecuteScalar() == null)
+            {
+                TenTxtBox.Text = cm2.ExecuteScalar().ToString();
+            }
+            else
+            {
+                HoTxtBox.Text = cm1.ExecuteScalar().ToString();
+                TenTxtBox.Text = cm2.ExecuteScalar().ToString();
+                emailTxtB.Text = cm3.ExecuteScalar().ToString();
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -48,7 +80,13 @@ namespace DoAn_1.MainForms.Component
                 cmd3 = new SqlCommand(query3, conn);
                 cmd3.ExecuteNonQuery();
                 conn.Close();
-                MessageBox.Show("Đổi thông tin thành công");
+                DialogResult result = MessageBox.Show("Đổi thông tin thành công");
+                if (result == DialogResult.OK)
+                {
+                    this.Hide();
+                    this.Close();
+                    MainScreen.instance.LoadForm(new SettingScreen());
+                }
             }
         }
     }
