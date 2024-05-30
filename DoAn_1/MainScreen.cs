@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,9 @@ namespace DoAn_1
 {
     public partial class MainScreen : Form
     {
+        SqlConnection Conn;
+        SqlCommand command;
+        SqlDataAdapter adapter = new SqlDataAdapter();
         public static MainScreen instance;
         
         public MainScreen()
@@ -22,10 +26,7 @@ namespace DoAn_1
 
             LoadForm(new OverviewForm());
         }
-        private void MainScreen_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         public void ChangeBtnOverview()
         {
@@ -35,6 +36,7 @@ namespace DoAn_1
             QLDienNuoc.BackColor = Color.FromArgb(68, 74, 70);
             ThongKe.BackColor = Color.FromArgb(68, 74, 70);
             About_ctn.BackColor = Color.FromArgb(68, 74, 70);
+            qlNhanVienCtn.BackColor = Color.FromArgb(68, 74, 70);
         }
         public void ChangeBtnQLSV()
         {
@@ -44,6 +46,7 @@ namespace DoAn_1
             QLDienNuoc.BackColor = Color.FromArgb(68, 74, 70);
             ThongKe.BackColor = Color.FromArgb(68, 74, 70);
             About_ctn.BackColor = Color.FromArgb(68, 74, 70);
+            qlNhanVienCtn.BackColor = Color.FromArgb(68, 74, 70);
         }
         public void ChangeBtnLogOut()
         {
@@ -54,6 +57,7 @@ namespace DoAn_1
             ThongKe.BackColor = Color.FromArgb(68, 74, 70);
             About_ctn.BackColor = Color.FromArgb(68, 74, 70);
             Logout.BackColor = Color.FromArgb(88, 92, 89);
+            qlNhanVienCtn.BackColor = Color.FromArgb(68, 74, 70);
         }
         public void ChangeBtnQLPKTX()
         {
@@ -63,6 +67,7 @@ namespace DoAn_1
             QLDienNuoc.BackColor = Color.FromArgb(68, 74, 70);
             ThongKe.BackColor = Color.FromArgb(68, 74, 70);
             About_ctn.BackColor = Color.FromArgb(68, 74, 70);
+            qlNhanVienCtn.BackColor = Color.FromArgb(68, 74, 70);
         }
         public void ChangeBtnTinhDienNuoc()
         {
@@ -72,6 +77,7 @@ namespace DoAn_1
             QLDienNuoc.BackColor = Color.FromArgb(88, 92, 89);
             ThongKe.BackColor = Color.FromArgb(68, 74, 70);
             About_ctn.BackColor = Color.FromArgb(68, 74, 70);
+            qlNhanVienCtn.BackColor = Color.FromArgb(68, 74, 70);
         }
         public void ChangeBtnThongKe()
         {
@@ -81,6 +87,7 @@ namespace DoAn_1
             QLDienNuoc.BackColor = Color.FromArgb(68, 74, 70);
             ThongKe.BackColor = Color.FromArgb(88, 92, 89);
             About_ctn.BackColor = Color.FromArgb(68, 74, 70);
+            qlNhanVienCtn.BackColor = Color.FromArgb(68, 74, 70);
         }
        
         public void ChangeBtnAbout()
@@ -91,6 +98,17 @@ namespace DoAn_1
             QLDienNuoc.BackColor = Color.FromArgb(68, 74, 70);
             ThongKe.BackColor = Color.FromArgb(68, 74, 70);
             About_ctn.BackColor = Color.FromArgb(88, 92, 89);
+            qlNhanVienCtn.BackColor = Color.FromArgb(68, 74, 70);
+        }
+        public void ChangeBtnQL()
+        {
+            BtnOverview.BackColor = Color.FromArgb(68, 74, 70);
+            QLSV.BackColor = Color.FromArgb(68, 74, 70);
+            QLPKTX.BackColor = Color.FromArgb(68, 74, 70);
+            QLDienNuoc.BackColor = Color.FromArgb(68, 74, 70);
+            ThongKe.BackColor = Color.FromArgb(68, 74, 70);
+            About_ctn.BackColor = Color.FromArgb(68, 74, 70);
+            qlNhanVienCtn.BackColor = Color.FromArgb(88, 92, 89);
         }
         public void LoadForm(object Form)
         {
@@ -170,6 +188,29 @@ namespace DoAn_1
         private void headerCtn_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void MainScreen_Load_1(object sender, EventArgs e)
+        {
+            qlNhanVienCtn.Enabled = false;
+            QlNhanVienTxt.Enabled = false;
+            Conn = new SqlConnection(ConnectDatabase.ConnDb);
+            Conn.Open();
+            string PositionQuery = "SELECT position FROM user_table WHERE username ='" + Properties.Settings.Default.username + "'";
+            SqlCommand cmdPosition = new SqlCommand(PositionQuery, Conn);
+            if(cmdPosition.ExecuteScalar().ToString() == "Trưởng phòng KTX")
+            {
+                qlNhanVienCtn.Visible = true;
+                QlNhanVienTxt.Visible = true;
+                qlNhanVienCtn.Enabled = true;
+                QlNhanVienTxt.Enabled = true;
+            }
+        }
+
+        private void qlNhanVienCtn_Click(object sender, EventArgs e)
+        {
+            LoadForm(new QLNhanVien());
+            ChangeBtnQL();
         }
     }
 }

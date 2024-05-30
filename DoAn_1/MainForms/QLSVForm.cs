@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
+using DoAn_1.MainForms.ReportScreen;
+
 
 namespace DoAn_1.MainForms
 {
@@ -305,6 +307,12 @@ namespace DoAn_1.MainForms
             Conn = new SqlConnection(ConnectDatabase.ConnDb);
             Conn.Open();
             loadComboBox(query, id, SvClassTxBox);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DDSVScreen dDSVScreen = new DDSVScreen();
+            dDSVScreen.ShowDialog();
         }
     }
 }

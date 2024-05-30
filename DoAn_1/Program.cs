@@ -13,7 +13,7 @@ namespace DoAn_1
         /// </summary>
         [STAThread]
         static void Main()
-        {
+         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             if(Properties.Settings.Default.username != "" && Properties.Settings.Default.password != "")

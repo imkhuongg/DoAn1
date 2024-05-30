@@ -33,19 +33,23 @@
             // 
             // reportViewer1
             // 
+            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "DoAn_1.MainForms.ReportViews.TKSinhVIen.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(2, 3);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(804, 634);
+            this.reportViewer1.Size = new System.Drawing.Size(959, 634);
             this.reportViewer1.TabIndex = 0;
             // 
             // SVReportTKScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(808, 640);
+            this.ClientSize = new System.Drawing.Size(960, 640);
             this.Controls.Add(this.reportViewer1);
+            this.MaximizeBox = false;
             this.Name = "SVReportTKScreen";
             this.Text = "SVReportTKScreen";
             this.Load += new System.EventHandler(this.SVReportTKScreen_Load);

@@ -43,6 +43,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.About = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.qlNhanVienCtn = new System.Windows.Forms.Panel();
+            this.QlNhanVienTxt = new System.Windows.Forms.Label();
             this.Logout = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.About_ctn = new System.Windows.Forms.Panel();
@@ -63,6 +65,7 @@
             this.ThongKe.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.qlNhanVienCtn.SuspendLayout();
             this.Logout.SuspendLayout();
             this.About_ctn.SuspendLayout();
             this.headerCtn.SuspendLayout();
@@ -246,6 +249,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(74)))), ((int)(((byte)(70)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.qlNhanVienCtn);
             this.panel2.Controls.Add(this.Logout);
             this.panel2.Controls.Add(this.About_ctn);
             this.panel2.Controls.Add(this.ThongKe);
@@ -261,13 +265,41 @@
             this.panel2.Size = new System.Drawing.Size(315, 572);
             this.panel2.TabIndex = 4;
             // 
+            // qlNhanVienCtn
+            // 
+            this.qlNhanVienCtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.qlNhanVienCtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(74)))), ((int)(((byte)(70)))));
+            this.qlNhanVienCtn.Controls.Add(this.QlNhanVienTxt);
+            this.qlNhanVienCtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.qlNhanVienCtn.Location = new System.Drawing.Point(3, 385);
+            this.qlNhanVienCtn.Margin = new System.Windows.Forms.Padding(2);
+            this.qlNhanVienCtn.Name = "qlNhanVienCtn";
+            this.qlNhanVienCtn.Size = new System.Drawing.Size(311, 52);
+            this.qlNhanVienCtn.TabIndex = 9;
+            this.qlNhanVienCtn.Visible = false;
+            this.qlNhanVienCtn.Click += new System.EventHandler(this.qlNhanVienCtn_Click);
+            // 
+            // QlNhanVienTxt
+            // 
+            this.QlNhanVienTxt.AutoSize = true;
+            this.QlNhanVienTxt.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.QlNhanVienTxt.ForeColor = System.Drawing.Color.White;
+            this.QlNhanVienTxt.Location = new System.Drawing.Point(58, 16);
+            this.QlNhanVienTxt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.QlNhanVienTxt.Name = "QlNhanVienTxt";
+            this.QlNhanVienTxt.Size = new System.Drawing.Size(128, 18);
+            this.QlNhanVienTxt.TabIndex = 0;
+            this.QlNhanVienTxt.Text = "Quản lý nhân viên";
+            this.QlNhanVienTxt.Visible = false;
+            this.QlNhanVienTxt.Click += new System.EventHandler(this.qlNhanVienCtn_Click);
+            // 
             // Logout
             // 
             this.Logout.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(74)))), ((int)(((byte)(70)))));
             this.Logout.Controls.Add(this.label11);
             this.Logout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Logout.Location = new System.Drawing.Point(2, 384);
+            this.Logout.Location = new System.Drawing.Point(0, 519);
             this.Logout.Margin = new System.Windows.Forms.Padding(2);
             this.Logout.Name = "Logout";
             this.Logout.Size = new System.Drawing.Size(311, 52);
@@ -439,7 +471,8 @@
             this.Controls.Add(this.headerCtn);
             this.Name = "MainScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "0";
+            this.Text = "Quản lý điện nước";
+            this.Load += new System.EventHandler(this.MainScreen_Load_1);
             this.QLSV.ResumeLayout(false);
             this.QLSV.PerformLayout();
             this.BtnOverview.ResumeLayout(false);
@@ -452,6 +485,8 @@
             this.ThongKe.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.qlNhanVienCtn.ResumeLayout(false);
+            this.qlNhanVienCtn.PerformLayout();
             this.Logout.ResumeLayout(false);
             this.Logout.PerformLayout();
             this.About_ctn.ResumeLayout(false);
@@ -494,5 +529,7 @@
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Panel Logout;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel qlNhanVienCtn;
+        private System.Windows.Forms.Label QlNhanVienTxt;
     }
 }

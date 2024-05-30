@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -121,6 +120,7 @@
             this.label24 = new System.Windows.Forms.Label();
             this.IdRoom = new System.Windows.Forms.TextBox();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.OutPKTX = new System.Windows.Forms.Button();
             this.SearchPKTXTxt = new System.Windows.Forms.TextBox();
             this.PKTXCBSearch = new System.Windows.Forms.ComboBox();
             this.DelPKTXBtn = new System.Windows.Forms.Button();
@@ -132,6 +132,9 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.PKTXtable = new System.Windows.Forms.DataGridView();
             this.tabDDPKTX = new System.Windows.Forms.TabControl();
+            this.OutDDPKTX = new System.Windows.Forms.Button();
+            this.OutNtru = new System.Windows.Forms.Button();
+            this.outChuyenPhong = new System.Windows.Forms.Button();
             this.tabNtru.SuspendLayout();
             this.panel9.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -333,6 +336,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.DarkCyan;
+            this.panel7.Controls.Add(this.OutNtru);
             this.panel7.Controls.Add(this.SearchDateNtru);
             this.panel7.Controls.Add(this.SearchNtruTxt);
             this.panel7.Controls.Add(this.NtruCb);
@@ -501,6 +505,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.DarkCyan;
+            this.panel5.Controls.Add(this.outChuyenPhong);
             this.panel5.Controls.Add(this.SearchDateTrans);
             this.panel5.Controls.Add(this.SearchTransTxt);
             this.panel5.Controls.Add(this.TransCb);
@@ -942,6 +947,7 @@
             // panel19
             // 
             this.panel19.BackColor = System.Drawing.Color.DarkCyan;
+            this.panel19.Controls.Add(this.OutDDPKTX);
             this.panel19.Controls.Add(this.SearchDDPKTXTxt);
             this.panel19.Controls.Add(this.ItemsRoomCB);
             this.panel19.Controls.Add(this.DelDDP);
@@ -1177,6 +1183,7 @@
             this.panel16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel16.BackColor = System.Drawing.Color.DarkCyan;
+            this.panel16.Controls.Add(this.OutPKTX);
             this.panel16.Controls.Add(this.SearchPKTXTxt);
             this.panel16.Controls.Add(this.PKTXCBSearch);
             this.panel16.Controls.Add(this.DelPKTXBtn);
@@ -1188,6 +1195,19 @@
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(237, 534);
             this.panel16.TabIndex = 1;
+            // 
+            // OutPKTX
+            // 
+            this.OutPKTX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OutPKTX.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.OutPKTX.ForeColor = System.Drawing.Color.Transparent;
+            this.OutPKTX.Location = new System.Drawing.Point(49, 379);
+            this.OutPKTX.Name = "OutPKTX";
+            this.OutPKTX.Size = new System.Drawing.Size(156, 28);
+            this.OutPKTX.TabIndex = 19;
+            this.OutPKTX.Text = "Xuất file";
+            this.OutPKTX.UseVisualStyleBackColor = true;
+            this.OutPKTX.Click += new System.EventHandler(this.OutPKTX_Click);
             // 
             // SearchPKTXTxt
             // 
@@ -1311,17 +1331,10 @@
             this.PKTXtable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.PKTXtable.BackgroundColor = System.Drawing.Color.White;
             this.PKTXtable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.PKTXtable.DefaultCellStyle = dataGridViewCellStyle4;
             this.PKTXtable.GridColor = System.Drawing.Color.Black;
             this.PKTXtable.Location = new System.Drawing.Point(33, 38);
             this.PKTXtable.Name = "PKTXtable";
+            this.PKTXtable.RowHeadersVisible = false;
             this.PKTXtable.RowHeadersWidth = 51;
             this.PKTXtable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.PKTXtable.Size = new System.Drawing.Size(694, 211);
@@ -1344,6 +1357,45 @@
             this.tabDDPKTX.SelectedIndex = 0;
             this.tabDDPKTX.Size = new System.Drawing.Size(1045, 569);
             this.tabDDPKTX.TabIndex = 11;
+            // 
+            // OutDDPKTX
+            // 
+            this.OutDDPKTX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OutDDPKTX.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.OutDDPKTX.ForeColor = System.Drawing.Color.Transparent;
+            this.OutDDPKTX.Location = new System.Drawing.Point(41, 380);
+            this.OutDDPKTX.Name = "OutDDPKTX";
+            this.OutDDPKTX.Size = new System.Drawing.Size(153, 33);
+            this.OutDDPKTX.TabIndex = 18;
+            this.OutDDPKTX.Text = "Xuất file";
+            this.OutDDPKTX.UseVisualStyleBackColor = true;
+            this.OutDDPKTX.Click += new System.EventHandler(this.OutDDPKTX_Click);
+            // 
+            // OutNtru
+            // 
+            this.OutNtru.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OutNtru.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.OutNtru.ForeColor = System.Drawing.Color.Transparent;
+            this.OutNtru.Location = new System.Drawing.Point(37, 407);
+            this.OutNtru.Name = "OutNtru";
+            this.OutNtru.Size = new System.Drawing.Size(153, 33);
+            this.OutNtru.TabIndex = 20;
+            this.OutNtru.Text = "Xuất file";
+            this.OutNtru.UseVisualStyleBackColor = true;
+            this.OutNtru.Click += new System.EventHandler(this.OutNtru_Click);
+            // 
+            // outChuyenPhong
+            // 
+            this.outChuyenPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.outChuyenPhong.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.outChuyenPhong.ForeColor = System.Drawing.Color.Transparent;
+            this.outChuyenPhong.Location = new System.Drawing.Point(47, 411);
+            this.outChuyenPhong.Name = "outChuyenPhong";
+            this.outChuyenPhong.Size = new System.Drawing.Size(153, 33);
+            this.outChuyenPhong.TabIndex = 21;
+            this.outChuyenPhong.Text = "Xuất file";
+            this.outChuyenPhong.UseVisualStyleBackColor = true;
+            this.outChuyenPhong.Click += new System.EventHandler(this.outChuyenPhong_Click);
             // 
             // QLPKTXScreen
             // 
@@ -1496,5 +1548,9 @@
         private System.Windows.Forms.DateTimePicker SearchDateNtru;
         private System.Windows.Forms.DateTimePicker SearchDateTrans;
         private System.Windows.Forms.TextBox IdRoomNtru;
+        private System.Windows.Forms.Button OutPKTX;
+        private System.Windows.Forms.Button OutDDPKTX;
+        private System.Windows.Forms.Button OutNtru;
+        private System.Windows.Forms.Button outChuyenPhong;
     }
 }

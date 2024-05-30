@@ -453,5 +453,17 @@ namespace DoAn_1.MainForms
             SVReportTKScreen SVRp = new SVReportTKScreen();
             SVRp.ShowDialog();
         }
+
+        private void PKTXReportBtn_Click(object sender, EventArgs e)
+        {
+            PKTXTKSreen pKTXTKSreen = new PKTXTKSreen();
+            pKTXTKSreen.ShowDialog();
+        }
+
+        private void PaymentRpBtn_Click(object sender, EventArgs e)
+        {
+           PaymentTKScreen paymentTKScreen = new PaymentTKScreen();
+            paymentTKScreen.ShowDialog();
+        }
     }
 }

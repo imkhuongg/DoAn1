@@ -9,7 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DoAn_1.MainForms.Component;
+using DoAn_1.MainForms.ReportScreen;
+
 
 namespace DoAn_1.MainForms
 {
@@ -983,6 +984,30 @@ namespace DoAn_1.MainForms
             {
                 SearchDateElec.Visible= false;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DSBillScreen dSBillScreen = new DSBillScreen();
+            dSBillScreen.ShowDialog();
+        }
+
+        private void OutElecBtn_Click(object sender, EventArgs e)
+        {
+            DSTienDienScreen dSTienDienScreen = new DSTienDienScreen();
+            dSTienDienScreen.ShowDialog();
+        }
+
+        private void OutWaterBtn_Click(object sender, EventArgs e)
+        {
+            DSTienNuocScreen dSTienNuocScreen = new DSTienNuocScreen();
+            dSTienNuocScreen.ShowDialog();
+        }
+
+        private void OutPayBtn_Click(object sender, EventArgs e)
+        {
+            DSHoaDonScreen dSHoaDonScreen = new DSHoaDonScreen();
+            dSHoaDonScreen.ShowDialog();
         }
     }
 }

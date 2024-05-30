@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using DoAn_1.MainForms.ReportScreen;
 
 namespace DoAn_1.MainForms
 {
@@ -950,6 +951,30 @@ namespace DoAn_1.MainForms
             {
                 SearchDateTrans.Visible = false;
             }
+        }
+
+        private void OutPKTX_Click(object sender, EventArgs e)
+        {
+            DSPKTXSreen dSPKTXSreen = new DSPKTXSreen();
+            dSPKTXSreen.ShowDialog();
+        }
+
+        private void OutDDPKTX_Click(object sender, EventArgs e)
+        {
+            DSDDPKTXSreen dSDDPKTXSreen = new DSDDPKTXSreen();
+            dSDDPKTXSreen.ShowDialog();
+        }
+
+        private void OutNtru_Click(object sender, EventArgs e)
+        {
+            DSNTruScrees dSNTruScrees = new DSNTruScrees();
+            dSNTruScrees.ShowDialog();  
+        }
+
+        private void outChuyenPhong_Click(object sender, EventArgs e)
+        {
+            DSChuyenPhongScreen dSChuyenPhongScreen = new DSChuyenPhongScreen();
+            dSChuyenPhongScreen.ShowDialog();
         }
     }
 }

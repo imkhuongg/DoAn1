@@ -81,12 +81,10 @@ namespace DoAn_1
         {
             Properties.Settings.Default.username = textBox1.Text;
             SqlConnection scn = new SqlConnection();
-            scn.ConnectionString = @"Data Source=IMKHUONGG\SQLEXPRESS;Initial Catalog=user_table;database=QLDienNuocKTX;integrated security=SSPI";
-            SqlCommand scmd = new SqlCommand("select count (*) as cnt from user_table where username=@usr and password=@pwd", scn);
+            scn.ConnectionString = @"Data Source=IMKHUONGG\SQLEXPRESS;Initial Catalog=user_table;database=QLDienNuocKTX_DoAn1;integrated security=SSPI";
+            SqlCommand scmd = new SqlCommand("select count (*) from user_table where username= '"+textBox1.Text+"'  and password='"+textBox2.Text+"'", scn);
             
-            scmd.Parameters.Clear();
-            scmd.Parameters.AddWithValue("@usr", textBox1.Text);
-            scmd.Parameters.AddWithValue("@pwd", textBox2.Text);
+          
             scn.Open();
             if (textBox1.Text == "" || textBox2.Text == "")
             {

@@ -49,6 +49,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.OutElecBtn = new System.Windows.Forms.Button();
             this.SearchDateElec = new System.Windows.Forms.DateTimePicker();
             this.SearchElecTxt = new System.Windows.Forms.TextBox();
             this.SearchElecCb = new System.Windows.Forms.ComboBox();
@@ -74,6 +75,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnFuncCtn = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.SearchBillTxt = new System.Windows.Forms.TextBox();
             this.SearchCbox = new System.Windows.Forms.ComboBox();
             this.SearchBillBtn = new System.Windows.Forms.Button();
@@ -84,6 +86,7 @@
             this.TabDienNuoc = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.OutWaterBtn = new System.Windows.Forms.Button();
             this.SearchWaterDate = new System.Windows.Forms.DateTimePicker();
             this.SearchTxtB = new System.Windows.Forms.TextBox();
             this.WaterCb = new System.Windows.Forms.ComboBox();
@@ -109,6 +112,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.OutPayBtn = new System.Windows.Forms.Button();
             this.SearchPayDate = new System.Windows.Forms.DateTimePicker();
             this.SearchPayTxtB = new System.Windows.Forms.TextBox();
             this.IdPayTxtB = new System.Windows.Forms.TextBox();
@@ -165,7 +169,7 @@
             this.InfNuoc.Margin = new System.Windows.Forms.Padding(2);
             this.InfNuoc.Name = "InfNuoc";
             this.InfNuoc.Padding = new System.Windows.Forms.Padding(2);
-            this.InfNuoc.Size = new System.Drawing.Size(1040, 538);
+            this.InfNuoc.Size = new System.Drawing.Size(1040, 535);
             this.InfNuoc.TabIndex = 1;
             this.InfNuoc.Text = "Tiền điện";
             this.InfNuoc.UseVisualStyleBackColor = true;
@@ -176,7 +180,7 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(2, 150);
+            this.panel2.Location = new System.Drawing.Point(2, 147);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(814, 386);
@@ -335,13 +339,14 @@
             this.panel5.Location = new System.Drawing.Point(816, 2);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(222, 534);
+            this.panel5.Size = new System.Drawing.Size(222, 531);
             this.panel5.TabIndex = 3;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(200)))), ((int)(((byte)(173)))));
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.OutElecBtn);
             this.panel6.Controls.Add(this.SearchDateElec);
             this.panel6.Controls.Add(this.SearchElecTxt);
             this.panel6.Controls.Add(this.SearchElecCb);
@@ -355,6 +360,19 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(228, 531);
             this.panel6.TabIndex = 1;
+            // 
+            // OutElecBtn
+            // 
+            this.OutElecBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(200)))), ((int)(((byte)(173)))));
+            this.OutElecBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.OutElecBtn.Location = new System.Drawing.Point(40, 362);
+            this.OutElecBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.OutElecBtn.Name = "OutElecBtn";
+            this.OutElecBtn.Size = new System.Drawing.Size(142, 29);
+            this.OutElecBtn.TabIndex = 15;
+            this.OutElecBtn.Text = "Xuất file";
+            this.OutElecBtn.UseVisualStyleBackColor = false;
+            this.OutElecBtn.Click += new System.EventHandler(this.OutElecBtn_Click);
             // 
             // SearchDateElec
             // 
@@ -655,6 +673,7 @@
             // 
             this.BtnFuncCtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(200)))), ((int)(((byte)(173)))));
             this.BtnFuncCtn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BtnFuncCtn.Controls.Add(this.button1);
             this.BtnFuncCtn.Controls.Add(this.SearchBillTxt);
             this.BtnFuncCtn.Controls.Add(this.SearchCbox);
             this.BtnFuncCtn.Controls.Add(this.SearchBillBtn);
@@ -667,6 +686,19 @@
             this.BtnFuncCtn.Name = "BtnFuncCtn";
             this.BtnFuncCtn.Size = new System.Drawing.Size(228, 531);
             this.BtnFuncCtn.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(200)))), ((int)(((byte)(173)))));
+            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button1.Location = new System.Drawing.Point(40, 342);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(142, 29);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Xuất file";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // SearchBillTxt
             // 
@@ -793,7 +825,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(1040, 538);
+            this.tabPage1.Size = new System.Drawing.Size(1040, 535);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Tiền nước";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -801,6 +833,7 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(200)))), ((int)(((byte)(173)))));
+            this.panel9.Controls.Add(this.OutWaterBtn);
             this.panel9.Controls.Add(this.SearchWaterDate);
             this.panel9.Controls.Add(this.SearchTxtB);
             this.panel9.Controls.Add(this.WaterCb);
@@ -814,6 +847,19 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(213, 537);
             this.panel9.TabIndex = 2;
+            // 
+            // OutWaterBtn
+            // 
+            this.OutWaterBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(200)))), ((int)(((byte)(173)))));
+            this.OutWaterBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.OutWaterBtn.Location = new System.Drawing.Point(40, 373);
+            this.OutWaterBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.OutWaterBtn.Name = "OutWaterBtn";
+            this.OutWaterBtn.Size = new System.Drawing.Size(142, 29);
+            this.OutWaterBtn.TabIndex = 14;
+            this.OutWaterBtn.Text = "Xuất file";
+            this.OutWaterBtn.UseVisualStyleBackColor = false;
+            this.OutWaterBtn.Click += new System.EventHandler(this.OutWaterBtn_Click);
             // 
             // SearchWaterDate
             // 
@@ -1114,7 +1160,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(1040, 538);
+            this.tabPage2.Size = new System.Drawing.Size(1040, 535);
             this.tabPage2.TabIndex = 3;
             this.tabPage2.Text = "Hoá đơn theo phòng";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1122,6 +1168,7 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(200)))), ((int)(((byte)(173)))));
+            this.panel12.Controls.Add(this.OutPayBtn);
             this.panel12.Controls.Add(this.SearchPayDate);
             this.panel12.Controls.Add(this.SearchPayTxtB);
             this.panel12.Controls.Add(this.IdPayTxtB);
@@ -1142,6 +1189,19 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(274, 535);
             this.panel12.TabIndex = 1;
+            // 
+            // OutPayBtn
+            // 
+            this.OutPayBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(200)))), ((int)(((byte)(173)))));
+            this.OutPayBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.OutPayBtn.Location = new System.Drawing.Point(111, 379);
+            this.OutPayBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.OutPayBtn.Name = "OutPayBtn";
+            this.OutPayBtn.Size = new System.Drawing.Size(142, 29);
+            this.OutPayBtn.TabIndex = 22;
+            this.OutPayBtn.Text = "Xuất file";
+            this.OutPayBtn.UseVisualStyleBackColor = false;
+            this.OutPayBtn.Click += new System.EventHandler(this.OutPayBtn_Click);
             // 
             // SearchPayDate
             // 
@@ -1513,5 +1573,9 @@
         private System.Windows.Forms.DateTimePicker SearchPayDate;
         private System.Windows.Forms.DateTimePicker SearchWaterDate;
         private System.Windows.Forms.DateTimePicker SearchDateElec;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button OutElecBtn;
+        private System.Windows.Forms.Button OutWaterBtn;
+        private System.Windows.Forms.Button OutPayBtn;
     }
 }

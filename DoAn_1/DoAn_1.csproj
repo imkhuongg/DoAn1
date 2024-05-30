@@ -78,23 +78,35 @@
     <Compile Include="MainForms\AboutScreen.Designer.cs">
       <DependentUpon>AboutScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForms\Component\CongToTxtScreen.cs">
+    <Compile Include="MainForms\Component\ChangeAvatar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForms\Component\CongToTxtScreen.Designer.cs">
-      <DependentUpon>CongToTxtScreen.cs</DependentUpon>
+    <Compile Include="MainForms\Component\ChangeAvatar.Designer.cs">
+      <DependentUpon>ChangeAvatar.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForms\Component\DonGiaTxtBtn.cs">
+    <Compile Include="MainForms\Component\ChangeNameScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForms\Component\DonGiaTxtBtn.Designer.cs">
-      <DependentUpon>DonGiaTxtBtn.cs</DependentUpon>
+    <Compile Include="MainForms\Component\ChangeNameScreen.Designer.cs">
+      <DependentUpon>ChangeNameScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Component\ChangePasword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Component\ChangePasword.Designer.cs">
+      <DependentUpon>ChangePasword.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForms\OverviewForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForms\OverviewForm.Designer.cs">
       <DependentUpon>OverviewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\QLNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\QLNhanVien.Designer.cs">
+      <DependentUpon>QLNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForms\QLPKTXScreen.cs">
       <SubType>Form</SubType>
@@ -108,11 +120,79 @@
     <Compile Include="MainForms\QLSVForm.Designer.cs">
       <DependentUpon>QLSVForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForms\ReportScreen\DDSVScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\ReportScreen\DDSVScreen.Designer.cs">
+      <DependentUpon>DDSVScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\ReportScreen\DSBillScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\ReportScreen\DSBillScreen.Designer.cs">
+      <DependentUpon>DSBillScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\ReportScreen\DSChuyenPhongScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\ReportScreen\DSChuyenPhongScreen.Designer.cs">
+      <DependentUpon>DSChuyenPhongScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\ReportScreen\DSDDPKTXSreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\ReportScreen\DSDDPKTXSreen.Designer.cs">
+      <DependentUpon>DSDDPKTXSreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\ReportScreen\DSHoaDonScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\ReportScreen\DSHoaDonScreen.Designer.cs">
+      <DependentUpon>DSHoaDonScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\ReportScreen\DSNTruScrees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\ReportScreen\DSNTruScrees.Designer.cs">
+      <DependentUpon>DSNTruScrees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\ReportScreen\DSPKTXSreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\ReportScreen\DSPKTXSreen.Designer.cs">
+      <DependentUpon>DSPKTXSreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\ReportScreen\DSTienDienScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\ReportScreen\DSTienDienScreen.Designer.cs">
+      <DependentUpon>DSTienDienScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\ReportScreen\DSTienNuocScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\ReportScreen\DSTienNuocScreen.Designer.cs">
+      <DependentUpon>DSTienNuocScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\ReportScreen\PaymentTKScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\ReportScreen\PaymentTKScreen.Designer.cs">
+      <DependentUpon>PaymentTKScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\ReportScreen\PKTXTKSreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\ReportScreen\PKTXTKSreen.Designer.cs">
+      <DependentUpon>PKTXTKSreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForms\ReportScreen\SVReportTKScreen.cs">
       <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="MainForms\ReportScreen\SVReportTKScreen.Designer.cs">
       <DependentUpon>SVReportTKScreen.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="MainForms\SettingScreen.cs">
       <SubType>Form</SubType>
@@ -140,20 +220,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QLDienNuocKTXDataSet.Designer.cs">
+    <Compile Include="QLDienNuocKTX_DoAn1DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QLDienNuocKTXDataSet.xsd</DependentUpon>
+      <DependentUpon>QLDienNuocKTX_DoAn1DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="QLDienNuocKTXDataSet1.Designer.cs">
+    <Compile Include="QLDienNuocKTX_DoAn1DataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QLDienNuocKTXDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="QLDienNuocKTX_DoAn1DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLDienNuocKTX_DoAn1DataSet.xsd</DependentUpon>
+      <DependentUpon>QLDienNuocKTX_DoAn1DataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -162,11 +237,20 @@
     <EmbeddedResource Include="MainForms\AboutScreen.resx">
       <DependentUpon>AboutScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForms\Component\DonGiaTxtBtn.resx">
-      <DependentUpon>DonGiaTxtBtn.cs</DependentUpon>
+    <EmbeddedResource Include="MainForms\Component\ChangeAvatar.resx">
+      <DependentUpon>ChangeAvatar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Component\ChangeNameScreen.resx">
+      <DependentUpon>ChangeNameScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Component\ChangePasword.resx">
+      <DependentUpon>ChangePasword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForms\OverviewForm.resx">
       <DependentUpon>OverviewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\QLNhanVien.resx">
+      <DependentUpon>QLNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForms\QLPKTXScreen.resx">
       <DependentUpon>QLPKTXScreen.cs</DependentUpon>
@@ -174,10 +258,57 @@
     <EmbeddedResource Include="MainForms\QLSVForm.resx">
       <DependentUpon>QLSVForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\ReportScreen\DDSVScreen.resx">
+      <DependentUpon>DDSVScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\ReportScreen\DSBillScreen.resx">
+      <DependentUpon>DSBillScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\ReportScreen\DSChuyenPhongScreen.resx">
+      <DependentUpon>DSChuyenPhongScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\ReportScreen\DSDDPKTXSreen.resx">
+      <DependentUpon>DSDDPKTXSreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\ReportScreen\DSHoaDonScreen.resx">
+      <DependentUpon>DSHoaDonScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\ReportScreen\DSNTruScrees.resx">
+      <DependentUpon>DSNTruScrees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\ReportScreen\DSPKTXSreen.resx">
+      <DependentUpon>DSPKTXSreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\ReportScreen\DSTienDienScreen.resx">
+      <DependentUpon>DSTienDienScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\ReportScreen\DSTienNuocScreen.resx">
+      <DependentUpon>DSTienNuocScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\ReportScreen\PaymentTKScreen.resx">
+      <DependentUpon>PaymentTKScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\ReportScreen\PKTXTKSreen.resx">
+      <DependentUpon>PKTXTKSreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForms\ReportScreen\SVReportTKScreen.resx">
       <DependentUpon>SVReportTKScreen.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\ReportViews\DDSV.rdlc" />
+    <EmbeddedResource Include="MainForms\ReportViews\DSBill.rdlc" />
+    <EmbeddedResource Include="MainForms\ReportViews\DSChuyenPhong.rdlc" />
+    <EmbeddedResource Include="MainForms\ReportViews\DSDDPKTX.rdlc" />
+    <EmbeddedResource Include="MainForms\ReportViews\DSHoaDon.rdlc" />
+    <EmbeddedResource Include="MainForms\ReportViews\DSNTru.rdlc" />
+    <EmbeddedResource Include="MainForms\ReportViews\DSPKTX.rdlc" />
+    <EmbeddedResource Include="MainForms\ReportViews\DSTienDien.rdlc" />
+    <EmbeddedResource Include="MainForms\ReportViews\DSTienNuoc.rdlc" />
+    <EmbeddedResource Include="MainForms\ReportViews\Payment_TK.rdlc" />
     <EmbeddedResource Include="MainForms\ReportViews\TKSinhVIen.rdlc" />
+    <EmbeddedResource Include="MainForms\ReportViews\TK_PTKX.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForms\SettingScreen.resx">
       <DependentUpon>SettingScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,38 +346,27 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="QLDienNuocKTXDataSet.xsc">
-      <DependentUpon>QLDienNuocKTXDataSet.xsd</DependentUpon>
+    <None Include="QLDienNuocKTX_DoAn1DataSet1.xsc">
+      <DependentUpon>QLDienNuocKTX_DoAn1DataSet1.xsd</DependentUpon>
     </None>
-    <None Include="QLDienNuocKTXDataSet.xsd">
+    <None Include="QLDienNuocKTX_DoAn1DataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLDienNuocKTXDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>QLDienNuocKTX_DoAn1DataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="QLDienNuocKTXDataSet.xss">
-      <DependentUpon>QLDienNuocKTXDataSet.xsd</DependentUpon>
+    <None Include="QLDienNuocKTX_DoAn1DataSet1.xss">
+      <DependentUpon>QLDienNuocKTX_DoAn1DataSet1.xsd</DependentUpon>
     </None>
-    <None Include="QLDienNuocKTXDataSet1.xsc">
-      <DependentUpon>QLDienNuocKTXDataSet1.xsd</DependentUpon>
+    <None Include="QLDienNuocKTX_DoAn1DataSet2.xsc">
+      <DependentUpon>QLDienNuocKTX_DoAn1DataSet2.xsd</DependentUpon>
     </None>
-    <None Include="QLDienNuocKTXDataSet1.xsd">
+    <None Include="QLDienNuocKTX_DoAn1DataSet2.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLDienNuocKTXDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>QLDienNuocKTX_DoAn1DataSet2.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="QLDienNuocKTXDataSet1.xss">
-      <DependentUpon>QLDienNuocKTXDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="QLDienNuocKTX_DoAn1DataSet.xsc">
-      <DependentUpon>QLDienNuocKTX_DoAn1DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QLDienNuocKTX_DoAn1DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLDienNuocKTX_DoAn1DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLDienNuocKTX_DoAn1DataSet.xss">
-      <DependentUpon>QLDienNuocKTX_DoAn1DataSet.xsd</DependentUpon>
+    <None Include="QLDienNuocKTX_DoAn1DataSet2.xss">
+      <DependentUpon>QLDienNuocKTX_DoAn1DataSet2.xsd</DependentUpon>
     </None>
     <None Include="Resources\download-removebg-preview %282%29.png" />
   </ItemGroup>
@@ -284,6 +404,10 @@
     <None Include="Resources\hungBo.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="access\default.jpg" />
+    <Content Include="access\pexels-samerdaboul-746111.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -39,6 +39,8 @@
             this.InitBtn = new System.Windows.Forms.Button();
             this.SVTable = new System.Windows.Forms.DataGridView();
             this.EditInfView = new System.Windows.Forms.Panel();
+            this.KhoaCB = new System.Windows.Forms.ComboBox();
+            this.SvClassTxBox = new System.Windows.Forms.ComboBox();
             this.GioiTinhCB = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.NgaySinhTxbox = new System.Windows.Forms.DateTimePicker();
@@ -53,8 +55,7 @@
             this.MaSVTxBox = new System.Windows.Forms.TextBox();
             this.TableCtn = new System.Windows.Forms.Panel();
             this.SVTableCtn = new System.Windows.Forms.GroupBox();
-            this.SvClassTxBox = new System.Windows.Forms.ComboBox();
-            this.KhoaCB = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SVTable)).BeginInit();
             this.EditInfView.SuspendLayout();
@@ -65,6 +66,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(74)))), ((int)(((byte)(70)))));
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.SearchQLSVDate);
             this.panel1.Controls.Add(this.SearchTxt);
             this.panel1.Controls.Add(this.SearchList);
@@ -231,6 +233,25 @@
             this.EditInfView.Size = new System.Drawing.Size(867, 238);
             this.EditInfView.TabIndex = 6;
             // 
+            // KhoaCB
+            // 
+            this.KhoaCB.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.KhoaCB.FormattingEnabled = true;
+            this.KhoaCB.Location = new System.Drawing.Point(89, 103);
+            this.KhoaCB.Name = "KhoaCB";
+            this.KhoaCB.Size = new System.Drawing.Size(155, 30);
+            this.KhoaCB.TabIndex = 19;
+            this.KhoaCB.SelectedIndexChanged += new System.EventHandler(this.KhoaCB_SelectedIndexChanged);
+            // 
+            // SvClassTxBox
+            // 
+            this.SvClassTxBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.SvClassTxBox.FormattingEnabled = true;
+            this.SvClassTxBox.Location = new System.Drawing.Point(359, 105);
+            this.SvClassTxBox.Name = "SvClassTxBox";
+            this.SvClassTxBox.Size = new System.Drawing.Size(164, 30);
+            this.SvClassTxBox.TabIndex = 18;
+            // 
             // GioiTinhCB
             // 
             this.GioiTinhCB.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -374,24 +395,18 @@
             this.SVTableCtn.TabStop = false;
             this.SVTableCtn.Text = "Bảng Sinh Viên";
             // 
-            // SvClassTxBox
+            // button1
             // 
-            this.SvClassTxBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.SvClassTxBox.FormattingEnabled = true;
-            this.SvClassTxBox.Location = new System.Drawing.Point(359, 105);
-            this.SvClassTxBox.Name = "SvClassTxBox";
-            this.SvClassTxBox.Size = new System.Drawing.Size(164, 30);
-            this.SvClassTxBox.TabIndex = 18;
-            // 
-            // KhoaCB
-            // 
-            this.KhoaCB.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.KhoaCB.FormattingEnabled = true;
-            this.KhoaCB.Location = new System.Drawing.Point(89, 103);
-            this.KhoaCB.Name = "KhoaCB";
-            this.KhoaCB.Size = new System.Drawing.Size(155, 30);
-            this.KhoaCB.TabIndex = 19;
-            this.KhoaCB.SelectedIndexChanged += new System.EventHandler(this.KhoaCB_SelectedIndexChanged);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button1.Location = new System.Drawing.Point(35, 432);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(129, 36);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Xuất file";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // QLSVForm
             // 
@@ -446,5 +461,6 @@
         private System.Windows.Forms.TextBox SearchTxt;
         private System.Windows.Forms.ComboBox KhoaCB;
         private System.Windows.Forms.ComboBox SvClassTxBox;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -31,6 +31,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.SVReportBtn = new System.Windows.Forms.Button();
             this.SVDate = new System.Windows.Forms.DateTimePicker();
             this.SVCB = new System.Windows.Forms.ComboBox();
             this.SVTxt = new System.Windows.Forms.TextBox();
@@ -40,6 +41,7 @@
             this.TableSVKTX = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.PKTXReportBtn = new System.Windows.Forms.Button();
             this.CBPKTX = new System.Windows.Forms.ComboBox();
             this.PKTXTxt = new System.Windows.Forms.TextBox();
             this.SearchPKTXBtn = new System.Windows.Forms.Button();
@@ -55,7 +57,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.PayTable = new System.Windows.Forms.DataGridView();
-            this.SVReportBtn = new System.Windows.Forms.Button();
+            this.PaymentRpBtn = new System.Windows.Forms.Button();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -79,6 +82,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tabControl1.Location = new System.Drawing.Point(2, 2);
             this.tabControl1.Name = "tabControl1";
@@ -112,6 +116,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(213, 536);
             this.panel2.TabIndex = 1;
+            // 
+            // SVReportBtn
+            // 
+            this.SVReportBtn.BackColor = System.Drawing.Color.DimGray;
+            this.SVReportBtn.Location = new System.Drawing.Point(36, 149);
+            this.SVReportBtn.Name = "SVReportBtn";
+            this.SVReportBtn.Size = new System.Drawing.Size(142, 36);
+            this.SVReportBtn.TabIndex = 7;
+            this.SVReportBtn.Text = "Xuất báo cáo";
+            this.SVReportBtn.UseVisualStyleBackColor = false;
+            this.SVReportBtn.Click += new System.EventHandler(this.SVReportBtn_Click);
             // 
             // SVDate
             // 
@@ -210,6 +225,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.DimGray;
+            this.panel4.Controls.Add(this.PKTXReportBtn);
             this.panel4.Controls.Add(this.CBPKTX);
             this.panel4.Controls.Add(this.PKTXTxt);
             this.panel4.Controls.Add(this.SearchPKTXBtn);
@@ -218,6 +234,17 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(210, 536);
             this.panel4.TabIndex = 2;
+            // 
+            // PKTXReportBtn
+            // 
+            this.PKTXReportBtn.BackColor = System.Drawing.Color.DimGray;
+            this.PKTXReportBtn.Location = new System.Drawing.Point(35, 117);
+            this.PKTXReportBtn.Name = "PKTXReportBtn";
+            this.PKTXReportBtn.Size = new System.Drawing.Size(142, 36);
+            this.PKTXReportBtn.TabIndex = 8;
+            this.PKTXReportBtn.Text = "Xuất báo cáo";
+            this.PKTXReportBtn.UseVisualStyleBackColor = false;
+            this.PKTXReportBtn.Click += new System.EventHandler(this.PKTXReportBtn_Click);
             // 
             // CBPKTX
             // 
@@ -303,6 +330,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.DimGray;
+            this.panel6.Controls.Add(this.PaymentRpBtn);
             this.panel6.Controls.Add(this.DatePay);
             this.panel6.Controls.Add(this.PayCB);
             this.panel6.Controls.Add(this.PayTxt);
@@ -397,16 +425,26 @@
             this.PayTable.Size = new System.Drawing.Size(825, 482);
             this.PayTable.TabIndex = 0;
             // 
-            // SVReportBtn
+            // PaymentRpBtn
             // 
-            this.SVReportBtn.BackColor = System.Drawing.Color.DimGray;
-            this.SVReportBtn.Location = new System.Drawing.Point(36, 149);
-            this.SVReportBtn.Name = "SVReportBtn";
-            this.SVReportBtn.Size = new System.Drawing.Size(142, 36);
-            this.SVReportBtn.TabIndex = 7;
-            this.SVReportBtn.Text = "Xuất báo cáo";
-            this.SVReportBtn.UseVisualStyleBackColor = false;
-            this.SVReportBtn.Click += new System.EventHandler(this.SVReportBtn_Click);
+            this.PaymentRpBtn.BackColor = System.Drawing.Color.DimGray;
+            this.PaymentRpBtn.Location = new System.Drawing.Point(39, 149);
+            this.PaymentRpBtn.Name = "PaymentRpBtn";
+            this.PaymentRpBtn.Size = new System.Drawing.Size(142, 36);
+            this.PaymentRpBtn.TabIndex = 9;
+            this.PaymentRpBtn.Text = "Xuất báo cáo";
+            this.PaymentRpBtn.UseVisualStyleBackColor = false;
+            this.PaymentRpBtn.Click += new System.EventHandler(this.PaymentRpBtn_Click);
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1057, 542);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Báo cáo danh sách";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // ThongKeScreen
             // 
@@ -471,5 +509,8 @@
         private System.Windows.Forms.DateTimePicker SVDate;
         private System.Windows.Forms.DateTimePicker DatePay;
         private System.Windows.Forms.Button SVReportBtn;
+        private System.Windows.Forms.Button PKTXReportBtn;
+        private System.Windows.Forms.Button PaymentRpBtn;
+        private System.Windows.Forms.TabPage tabPage4;
     }
 }
