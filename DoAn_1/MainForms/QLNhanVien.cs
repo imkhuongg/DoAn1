@@ -117,9 +117,15 @@ namespace DoAn_1.MainForms
             else
             {
 
-                ConnectAndQuerry(query);
-                LoadTable(queryNV, tableNV, NVTable);
-                MessageBox.Show("Xoá nhân viên thành công");
+                
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xoá nhân viên "+MaTxBox.Text+"?" , "" , MessageBoxButtons.OKCancel);
+                if(result == DialogResult.OK)
+                {
+                    ConnectAndQuerry(query);
+                    LoadTable(queryNV, tableNV, NVTable);
+                    MessageBox.Show("Xoá thành công");
+                }
+
 
             }
         }

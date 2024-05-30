@@ -129,6 +129,7 @@ namespace DoAn_1.MainForms
             Conn.Open();
             string query = "INSERT INTO dormitory(maphong,sophong,sotoa,soluongSVdango) VALUES ('" + IdRoom.Text + "',N'" + NumRoom.Text + "',N'" + NumBuid.Text + "','" + NumStudent.Text + "')";
             string CheckIDQuerry = "SELECT COUNT(*) FROM dormitory WHERE maphong= '" + IdRoom.Text + "'";
+            
             SqlCommand Check = new SqlCommand(CheckIDQuerry, Conn);
             if (IdRoom.Text == "" || NumRoom.Text == "" || NumBuid.Text == "")
             {   
@@ -144,6 +145,7 @@ namespace DoAn_1.MainForms
             }
             else
             {
+                MessageBox.Show("Thêm thành công");
                 ConnectAndQuerry(query);
                 LoadTable(QueryPKTX , tablePKTX, PKTXtable);
             }
@@ -154,15 +156,65 @@ namespace DoAn_1.MainForms
         {
             Conn = new SqlConnection(ConnectDatabase.ConnDb);
             Conn.Open();
-            string query = "DELETE FROM dormitory where maphong= '" + IdRoom.Text + "'"; 
+            string query = "DELETE FROM dormitory where maphong= '" + IdRoom.Text + "'";
+            string check1 = "Select count(*) from dormitory_items where maphong = '"+IdRoom.Text+"'";
+            string check2 = "Select count(*) from room_transfer where maphong = '" + IdRoom.Text + "'";
+            string check3 = "Select count(*) from ElecDevice where maphong = '" + IdRoom.Text + "'";
+            string check4 = "Select count(*) from payment where maphong = '" + IdRoom.Text + "'";
+            string check5 = "Select count(*) from bill where maphong = '" + IdRoom.Text + "'";
+            string check6 = "Select count(*) from student_residence where maphong = '" + IdRoom.Text + "'";
+
+            SqlCommand cm1 = new SqlCommand(check1, Conn);
+            SqlCommand cm2 = new SqlCommand(check2, Conn);
+            SqlCommand cm3 = new SqlCommand(check3, Conn);
+            SqlCommand cm4 = new SqlCommand(check4, Conn);
+            SqlCommand cm5 = new SqlCommand(check5, Conn);
+            SqlCommand cm6 = new SqlCommand(check6, Conn);
             if (IdRoom.Text == "")
             {
                 MessageBox.Show("Nhập mã phòng để xoá!!");
+                Conn.Close();
+            }
+            else if(cm1.ExecuteScalar().ToString() == "1")
+            {
+                MessageBox.Show("Phòng này có thông tin ở bảng đồ đác các phòng!!");
+                Conn.Close();
+            }
+            else if (cm2.ExecuteScalar().ToString() == "1")
+            {
+                MessageBox.Show("Phòng này có thông tin ở bảng chuyển phòng!!");
+                Conn.Close();
+            }
+            else if (cm3.ExecuteScalar().ToString() == "1")
+            {
+                MessageBox.Show("Phòng này có thông tin ở bảng chuyển phòng!!");
+                Conn.Close();
+            }
+            else if (cm4.ExecuteScalar().ToString() == "1")
+            {
+                MessageBox.Show("Phòng này có thông tin ở bảng hoá đơn!!");
+                Conn.Close();
+            }
+            else if (cm5.ExecuteScalar().ToString() == "1")
+            {
+                MessageBox.Show("Phòng này có thông tin ở bảng Đơn giá!!");
+                Conn.Close();
+            }
+            else if (cm1.ExecuteScalar().ToString() == "1")
+            {
+                MessageBox.Show("Phòng này có thông tin ở bảng nội trú!!");
+                Conn.Close();
             }
             else
             {
-                ConnectAndQuerry(query);
-                LoadTable(QueryPKTX, tablePKTX, PKTXtable);
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn xoá phòng này?" , "" , MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
+                if(result == DialogResult.OK)
+                {
+                    ConnectAndQuerry(query);
+                    LoadTable(QueryPKTX, tablePKTX, PKTXtable);
+                    MessageBox.Show("Xoá thành công");
+                }
+                
             }
         }
 
@@ -176,6 +228,7 @@ namespace DoAn_1.MainForms
                 MessageBox.Show("Trống mã phòng!");
             } else
             {
+                MessageBox.Show("Sửa thành công");
                 ConnectAndQuerry(query);
                 LoadTable(QueryPKTX, tablePKTX, PKTXtable);
             }
@@ -387,8 +440,9 @@ namespace DoAn_1.MainForms
             int i;
             i = TableTranfer.CurrentRow.Index;
             MaSVTrans.Text = TableTranfer.Rows[i].Cells[0].Value.ToString();
-            IdRoomTrans.Text = TableTranfer.Rows[i].Cells[1].Value.ToString(); ;
-            DateTrans.Text = TableTranfer.Rows[i].Cells[2].Value.ToString(); ;
+            IdRoomTrans.Text = TableTranfer.Rows[i].Cells[1].Value.ToString();
+            IdRoomTransTo.Text = TableTranfer.Rows[i].Cells[2].Value.ToString();
+            DateTrans.Text = TableTranfer.Rows[i].Cells[3].Value.ToString(); 
         }
 
         private void DelTrans_Click(object sender, EventArgs e)
@@ -529,6 +583,7 @@ namespace DoAn_1.MainForms
             Conn.Open();
             string updateNumSV = "Update dormitory SET soluongSVdango = soluongSVdango - 1 where maphong= '" + IdRoomNtru.Text + "'";
             string query = "DELETE FROM Student_residence WHERE masv = '"+MaSVNtru.Text+"' AND maphong= '"+IdRoomNtru.Text+"'";
+            
 
             if(MaSVNtru.Text== ""|| IdRoomNtru.Text == "")
             {
@@ -652,7 +707,7 @@ namespace DoAn_1.MainForms
             Conn = new SqlConnection(ConnectDatabase.ConnDb);
             Conn.Open();
             
-            string query = "SELECT maphongFROM Student_residence where masv = '" + MaSVTrans.Text + "'";
+            string query = "SELECT maphong FROM Student_residence where masv = '" + MaSVTrans.Text + "'";
             SqlCommand GetRoom = new SqlCommand(query, Conn);
             if (GetRoom.ExecuteScalar() != null)
             {

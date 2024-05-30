@@ -245,20 +245,61 @@ namespace DoAn_1.MainForms
 
         private void DelSvBtn_Click(object sender, EventArgs e)
         {
+            Conn = new SqlConnection(ConnectDatabase.ConnDb);
+            Conn.Open();
+            string query = "Select count(*) from Student_residence where masv = '"+MaSVTxBox.Text+"'";
+            string query1 = "Select count(*) from room_transfer where masv = '" + MaSVTxBox.Text + "'";
+            string query2 = "update dormitory set soluongSVdango = soluongSVdango-1 from dormitory\r\njoin Student_residence on dormitory.maphong = Student_residence.maphong\r\nwhere Student_residence.masv = '"+MaSVTxBox.Text+"'";
+            SqlCommand cmdcheck = new SqlCommand(query , Conn);
+            SqlCommand cmdcheck2 = new SqlCommand(query1, Conn);
+
 
             if (MaSVTxBox.Text == "") 
             {
                 MessageBox.Show("Nhập mã sinh viên để xoá!!");
             }
-            
+            else if (cmdcheck.ExecuteScalar().ToString() == "1")
+            {
+                DialogResult result = MessageBox.Show("Sinh viên này đang ở ký túc xá bạn có chắn chắn muốn xoá", "", MessageBoxButtons.OKCancel);
+                
+                if (result == DialogResult.OK)
+                {
+                    string querydel = "delete from student_residence where masv = '"+MaSVTxBox.Text+"'";
+
+                    SqlCommand cm1 = new SqlCommand(querydel, Conn);
+                    SqlCommand cm2 = new SqlCommand(query2 ,Conn);
+                    cm1.ExecuteNonQuery();
+                    cm2.ExecuteNonQuery();
+                    if(cmdcheck2.ExecuteScalar().ToString() == "1")
+                    {
+                        
+                        string querydel2 = "delete from room_transfer where masv = '" + MaSVTxBox.Text + "'";
+                        SqlCommand cm3 = new SqlCommand(querydel2, Conn);
+                        cm3.ExecuteNonQuery();
+                    }
+                    command = Conn.CreateCommand();
+                    command.CommandText = "DELETE FROM student where masv = '" + MaSVTxBox.Text + "'";
+                    command.ExecuteNonQuery();
+                    LoadTable();
+                    Conn.Close();
+                    MessageBox.Show("Xoá thành công");
+
+                }
+            }
             else
             {
-                Conn.Open();
-                command = Conn.CreateCommand();
-                command.CommandText = "DELETE FROM student where masvT = '" + MaSVTxBox.Text + "'";
-                command.ExecuteNonQuery();
-                LoadTable();
-                Conn.Close();
+
+                DialogResult result = MessageBox.Show("Bạn có chắc muốn xoá sinh viên này?", "" , MessageBoxButtons.OKCancel);
+                if(result == DialogResult.OK)
+                {
+                    command = Conn.CreateCommand();
+                    command.CommandText = "DELETE FROM student where masv = '" + MaSVTxBox.Text + "'";
+                    command.ExecuteNonQuery();
+                    LoadTable();
+                    Conn.Close();
+                    MessageBox.Show("Xoá thành công");
+                }
+                
             }
            
         }
