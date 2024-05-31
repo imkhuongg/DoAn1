@@ -126,8 +126,7 @@ namespace DoAn_1.MainForms
 
         private void InitBtn_Click(object sender, EventArgs e)
         {
-            NumBillTxt.ReadOnly = false;
-            NumBillTxt.Text = "";
+            
             BillWaterTxt.Text = "";
             BillRoomTxt.Text = "";
             IdRoomBuild.Text = "";
@@ -141,12 +140,12 @@ namespace DoAn_1.MainForms
 
             string query = "insert into bill(dongiadien , dongianuoc, dongiaphong, maphong) values ('" + BillElecTxt.Text + "','" + BillWaterTxt.Text + "','" + BillRoomTxt.Text + "','" + IdRoomBuild.Text + "')";
             string checkIdRoom = "Select count(*) from dormitory where maphong = '" + IdRoomBuild.Text + "'";
-            string checkNum = "select count(*) from bill where [Số phiếu] = '" + NumBillTxt.Text + "'";
+
             string checkIdRoom2 = "Select count(*) from bill where maphong = '" + IdRoomBuild.Text + "'";
 
 
             SqlCommand cmd = new SqlCommand(checkIdRoom, Conn);
-            SqlCommand check = new SqlCommand(checkNum, Conn);
+         
             SqlCommand check2 = new SqlCommand(checkIdRoom2, Conn);
 
             if (BillWaterTxt.Text == "" || BillRoomTxt.Text == "" || IdRoomBuild.Text == "" || BillElecTxt.Text == "")
@@ -159,11 +158,7 @@ namespace DoAn_1.MainForms
                 MessageBox.Show("Mã phòng không tồn tại!");
                 Conn.Close();
             }
-            else if (check.ExecuteScalar().ToString() == "1")
-            {
-                MessageBox.Show("Đã có số phiếu này vui lòng nhập lại");
-                Conn.Close();
-            }
+            
             else if (check2.ExecuteScalar().ToString() == "1")
             {
                 MessageBox.Show("Đã có mà phòng trong phiếu này vui lòng nhập lại");
@@ -185,7 +180,7 @@ namespace DoAn_1.MainForms
 
             string query = "Update bill SET dongiadien = '" + BillElecTxt.Text + "' ,dongianuoc = '" + BillWaterTxt.Text + "' , dongiaphong = '" + BillRoomTxt.Text + "' where maphong = '" + IdRoomBuild.Text + "' ";
 
-            if (NumBillTxt.Text == "" || BillWaterTxt.Text == "" || BillRoomTxt.Text == "" || IdRoomBuild.Text == "" || BillElecTxt.Text == "")
+            if ( BillWaterTxt.Text == "" || BillRoomTxt.Text == "" || IdRoomBuild.Text == "" || BillElecTxt.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập thông tin để sửa");
                 Conn.Close();
@@ -202,7 +197,7 @@ namespace DoAn_1.MainForms
 
         private void DonGiaTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            NumBillTxt.ReadOnly = true;
+           
             int i;
             i = DonGiaTable.CurrentRow.Index;
 
@@ -219,7 +214,7 @@ namespace DoAn_1.MainForms
             Conn.Open();
 
             string query = "DELETE FROM bill where maphong = '" + IdRoomBuild.Text + "'";
-            if (NumBillTxt.Text == "" || IdRoomBuild.Text == "")
+            if ( IdRoomBuild.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập số phiếu và mã phiếu để xoá");
                 Conn.Close();
@@ -1044,6 +1039,49 @@ namespace DoAn_1.MainForms
         {
             DSHoaDonScreen dSHoaDonScreen = new DSHoaDonScreen();
             dSHoaDonScreen.ShowDialog();
+        }
+
+        private void SearchBillTxt_TextChanged(object sender, EventArgs e)
+        {
+            if(SearchBillTxt.Text == "")
+            {
+                Conn = new SqlConnection(ConnectDatabase.ConnDb);
+                LoadTable(QueryTBDonGia, tableDonGia, DonGiaTable);
+            }
+            
+        }
+
+        private void SearchElecTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (SearchElecTxt.Text == "")
+            {
+                Conn = new SqlConnection(ConnectDatabase.ConnDb);
+                LoadTable(QueryTBCongTo, tableCongTo, ElecTable);
+            }
+           
+        }
+
+        private void SearchTxtB_TextChanged(object sender, EventArgs e)
+        {
+            if (SearchTxtB.Text == "")
+            {
+                Conn = new SqlConnection(ConnectDatabase.ConnDb);
+                LoadTable(QueryTBNuoc, tableNuoc, WaterTable);
+            }
+        }
+
+        private void NodeTxtB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SearchPayTxtB_TextChanged(object sender, EventArgs e)
+        {
+            if(SearchPayTxtB.Text == "")
+            {
+                Conn = new SqlConnection(ConnectDatabase.ConnDb);
+                LoadTable(QueryTBPay, tablePay, PaymentTable);
+            }
         }
     }
 }

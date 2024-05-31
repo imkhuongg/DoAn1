@@ -1080,5 +1080,41 @@ namespace DoAn_1.MainForms
             DSChuyenPhongScreen dSChuyenPhongScreen = new DSChuyenPhongScreen();
             dSChuyenPhongScreen.ShowDialog();
         }
+
+        private void SearchPKTXTxt_TextChanged(object sender, EventArgs e)
+        {
+            if(SearchPKTXTxt.Text == "")
+            {
+                Conn = new SqlConnection(ConnectDatabase.ConnDb);
+                LoadTable(QueryPKTX, tablePKTX, PKTXtable);
+            }
+        }
+
+        private void SearchDDPKTXTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (SearchDDPKTXTxt.Text == "")
+            {
+                Conn = new SqlConnection(ConnectDatabase.ConnDb);
+                LoadTable(QueryDDPKTX, tableDD, TableDDPKTX);
+            }
+        }
+
+        private void SearchNtruTxt_TextChanged(object sender, EventArgs e)
+        {
+            if(SearchNtruTxt.Text == "")
+            {
+                Conn = new SqlConnection(ConnectDatabase.ConnDb);
+                LoadTable(QueryNtru, tableNtru, NtruTable);
+            }
+        }
+
+        private void SearchTransTxt_TextChanged(object sender, EventArgs e)
+        {
+            if(SearchTransTxt.Text == "")
+            {
+                Conn = new SqlConnection(ConnectDatabase.ConnDb);
+                LoadTable(QuerryTrans, tableTrans, TableTranfer);
+            }
+        }
     }
 }
