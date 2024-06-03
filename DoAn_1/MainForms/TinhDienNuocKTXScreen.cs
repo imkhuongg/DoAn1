@@ -202,10 +202,10 @@ namespace DoAn_1.MainForms
             i = DonGiaTable.CurrentRow.Index;
 
             
-            BillElecTxt.Text = DonGiaTable.Rows[i].Cells[0].Value.ToString();
-            BillWaterTxt.Text = DonGiaTable.Rows[i].Cells[1].Value.ToString();
-            BillRoomTxt.Text = DonGiaTable.Rows[i].Cells[2].Value.ToString();
-            IdRoomBuild.Text = DonGiaTable.Rows[i].Cells[3].Value.ToString();
+            BillElecTxt.Text = DonGiaTable.Rows[i].Cells[1].Value.ToString();
+            BillWaterTxt.Text = DonGiaTable.Rows[i].Cells[2].Value.ToString();
+            BillRoomTxt.Text = DonGiaTable.Rows[i].Cells[3].Value.ToString();
+            IdRoomBuild.Text = DonGiaTable.Rows[i].Cells[0].Value.ToString();
         }
 
         private void DelBillBtn_Click(object sender, EventArgs e)

@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DoAn_1.exe" size="4512704">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DoAn_1.exe" size="4522432">
       <assemblyIdentity name="DoAn_1" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>R/93Xx2UwDm6ebS9ebBBfEMSPAuSu2tmI0fdESQhUQw=</dsig:DigestValue>
+        <dsig:DigestValue>L/qwBXz0SWNz3U0UfA/LBLjMUOOzMbM5en9MROklffc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

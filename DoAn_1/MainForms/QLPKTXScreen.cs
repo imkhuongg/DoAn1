@@ -417,11 +417,7 @@ namespace DoAn_1.MainForms
                 Conn.Close();
                 Conn.Dispose();
             } 
-            else if (sqlCommand.ExecuteScalar().ToString() == "1")
-            {
-                MessageBox.Show("Đã có thông tin chuyển phòng này");
-                Conn.Close();
-            }
+          
             else if(Check.ExecuteScalar().ToString() == "0" || CheckID.ExecuteScalar().ToString() == "0"){
                 MessageBox.Show("Không có phòng này hoặc không tồn tại sinh viên");
                 Conn.Close();
